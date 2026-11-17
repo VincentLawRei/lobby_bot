@@ -1,0 +1,4260 @@
+{
+ "test_access_and_server_select": {
+  "console": [],
+  "db": {
+   "console_access_col": [
+    {
+     "granted_by": "5",
+     "server_num": 1,
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+     "user_ids": []
+    }
+   ],
+   "player_locations_col": []
+  },
+  "result": [
+   [
+    "ConsoleServerSelectView",
+    null,
+    120,
+    [
+     [
+      "ConsoleServerSelect",
+      "auto",
+      null,
+      null,
+      "Выберите сервер для управления",
+      false,
+      [
+       [
+        "Сервер 1",
+        "0",
+        null,
+        false
+       ],
+       [
+        "Сервер 3",
+        "2",
+        null,
+        false
+       ]
+      ],
+      1,
+      1
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ У вас нет доступа к консоли этого сервера.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "🎮 **Консоль: Сервер 3**",
+     [
+      "ServerConsoleControlView",
+      null,
+      300,
+      [
+       [
+        "Button",
+        "auto",
+        1,
+        "MinHealth",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "Телепорт",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "Выдать предмет",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "🩹 Восстановить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        2,
+        "📢 Броадкаст",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "ConsoleTargetSelect",
+        "auto",
+        0,
+        null,
+        "Выберите роль (кому)",
+        false,
+        [
+         [
+          "Scout (Разведчица)",
+          "Scout",
+          null,
+          false
+         ],
+         [
+          "Commander (Командир)",
+          "Commander",
+          null,
+          false
+         ],
+         [
+          "Priest (Священник)",
+          "Priest",
+          null,
+          false
+         ],
+         [
+          "Medic (Медик)",
+          "Medic",
+          null,
+          false
+         ],
+         [
+          "Mechanic (Механик)",
+          "Mechanic",
+          null,
+          false
+         ],
+         [
+          "Quartermaster (Интендант)",
+          "Quartermaster",
+          null,
+          false
+         ],
+         [
+          "Guard (Охранник)",
+          "Guard",
+          null,
+          false
+         ],
+         [
+          "Pilot (Пилот)",
+          "Pilot",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "🎮 **Консоль: Сервер 3**",
+     [
+      "ServerConsoleControlView",
+      null,
+      300,
+      [
+       [
+        "Button",
+        "auto",
+        1,
+        "MinHealth",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "Телепорт",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "Выдать предмет",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "🩹 Восстановить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        2,
+        "📢 Броадкаст",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "ConsoleTargetSelect",
+        "auto",
+        0,
+        null,
+        "Выберите роль (кому)",
+        false,
+        [
+         [
+          "Scout (Разведчица)",
+          "Scout",
+          null,
+          false
+         ],
+         [
+          "Commander (Командир)",
+          "Commander",
+          null,
+          false
+         ],
+         [
+          "Priest (Священник)",
+          "Priest",
+          null,
+          false
+         ],
+         [
+          "Medic (Медик)",
+          "Medic",
+          null,
+          false
+         ],
+         [
+          "Mechanic (Механик)",
+          "Mechanic",
+          null,
+          false
+         ],
+         [
+          "Quartermaster (Интендант)",
+          "Quartermaster",
+          null,
+          false
+         ],
+         [
+          "Guard (Охранник)",
+          "Guard",
+          null,
+          false
+         ],
+         [
+          "Pilot (Пилот)",
+          "Pilot",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "Выдача доступа к консоли — Сервер 2:",
+     [
+      "ConsoleAccessView",
+      null,
+      180,
+      [
+       [
+        "ConsoleAccessSelect",
+        "auto",
+        null,
+        null,
+        "Кому дать доступ к консоли",
+        false,
+        [],
+        0,
+        25
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "✅ Доступ к консоли: <@7>, <@8>",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "🎮 **Консоль: Сервер 2**",
+     [
+      "ServerConsoleControlView",
+      null,
+      300,
+      [
+       [
+        "Button",
+        "auto",
+        1,
+        "MinHealth",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "Телепорт",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "Выдать предмет",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        1,
+        "🩹 Восстановить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        2,
+        "📢 Броадкаст",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "ConsoleTargetSelect",
+        "auto",
+        0,
+        null,
+        "Выберите роль (кому)",
+        false,
+        [
+         [
+          "Scout (Разведчица)",
+          "Scout",
+          null,
+          false
+         ],
+         [
+          "Commander (Командир)",
+          "Commander",
+          null,
+          false
+         ],
+         [
+          "Priest (Священник)",
+          "Priest",
+          null,
+          false
+         ],
+         [
+          "Medic (Медик)",
+          "Medic",
+          null,
+          false
+         ],
+         [
+          "Mechanic (Механик)",
+          "Mechanic",
+          null,
+          false
+         ],
+         [
+          "Quartermaster (Интендант)",
+          "Quartermaster",
+          null,
+          false
+         ],
+         [
+          "Guard (Охранник)",
+          "Guard",
+          null,
+          false
+         ],
+         [
+          "Pilot (Пилот)",
+          "Pilot",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    true,
+    false
+   ],
+   [
+    [
+     "send",
+     "✅ Доступ к консоли: никто (доступ очищен)",
+     null,
+     true
+    ]
+   ]
+  ],
+  "shared": []
+ },
+ "test_console_errors": {
+  "console": [],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": []
+  },
+  "result": [
+   [
+    false,
+    "Неизвестный сервер"
+   ],
+   [
+    [
+     "edit",
+     "❌ Ошибки:\nWarmthBoostRemaining: ssh down\nStaminaBoostRemaining: ssh down\nHealthBoostRemaining: ssh down",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "edit",
+     "❌ Ошибка: ssh down",
+     "keep"
+    ]
+   ]
+  ],
+  "shared": []
+ },
+ "test_constants_and_helpers": {
+  "constants": {
+   "CONSOLE_PORT": 16021,
+   "COORD_LIMIT": 50000,
+   "GLOBAL_KEY": "__global__",
+   "ITEMS": {
+    "Гвозди (Nails)": "/Game/Blueprints/Inventory/Metals/BP_Nails_Inventory.BP_Nails_Inventory_C",
+    "Детали ружья (GunParts)": "/Game/Blueprints/Inventory/Pistol/BP_GunParts_Inventory.BP_GunParts_Inventory_C",
+    "Камень (Rock)": "/Game/Blueprints/Inventory/Rock/BP_Rock_Inventory.BP_Rock_Inventory_C",
+    "Странное мясо (Strange Meat)": "/Game/Blueprints/Inventory/Meat/BP_StrangeMeat_Inventory.BP_StrangeMeat_Inventory_C",
+    "Кость (Club)": "/Game/Blueprints/Inventory/Meat/BP_Club_Inventory.BP_Club_Inventory_C",
+    "Старый пистолет (Pistol)": "/Game/Blueprints/Inventory/Pistol/BP_Pistol_Inventory.BP_Pistol_Inventory_C",
+    "Кирка (Pickaxe)": "/Game/Blueprints/Inventory/Pickaxe/BP_Pickaxe_Inventory.BP_Pickaxe_Inventory_C",
+    "Лопата (Shovel)": "/Game/Blueprints/Inventory/Shovel/BP_Shovel_Inventory.BP_Shovel_Inventory_C",
+    "Лук (Bow)": "/Game/Blueprints/Inventory/Bow/BP_Bow_Inventory.BP_Bow_Inventory_C",
+    "Медвежий капкан (BearTrap)": "/Game/Blueprints/Inventory/BearTrap/BP_BearTrap_Inventory.BP_BearTrap_Inventory_C",
+    "Винтовка (Rifle)": "/Game/Blueprints/Inventory/Rifle/BP_Rifle_Inventory.BP_Rifle_Inventory_C",
+    "Мясо животного (Animal Meat)": "/Game/Blueprints/Inventory/Meat/BP_AnimalMeat_Inventory.BP_AnimalMeat_Inventory_C",
+    "Заряд (Charge)": "/Game/Blueprints/Environment/Charge/BP_Charge_Inventory.BP_Charge_Inventory_C",
+    "Палка (Stick)": "/Game/Blueprints/Inventory/Stick/BP_Stick_Inventory.BP_Stick_Inventory_C",
+    "Патроны (Pistol Ammo)": "/Game/Blueprints/Inventory/Pistol/BP_Pistol_Ammo_Inventory.BP_Pistol_Ammo_Inventory_C",
+    "Порох (Gunpowder)": "/Game/Blueprints/Inventory/Pistol/BP_Gunpowder_Inventory.BP_Gunpowder_Inventory_C",
+    "Пороховая бочка (Powderkeg)": "/Game/Blueprints/Inventory/Powderkeg/BP_Powderkeg_Inventory.BP_Powderkeg_Inventory_C",
+    "Приготовленное мясо (Cooked Meat)": "/Game/Blueprints/Inventory/Meat/BP_CookedMeat_Inventory.BP_CookedMeat_Inventory_C",
+    "Противоядие (Antidote)": "/Game/Blueprints/Inventory/Poison/BP_Antidote_Inventory.BP_Antidote_Inventory_C",
+    "Сабля (Sword)": "/Game/Blueprints/Inventory/Sword/BP_Sword_Inventory.BP_Sword_Inventory_C",
+    "Слиток железа (IronIngot)": "/Game/Blueprints/Inventory/Metals/BP_IronIngot_Inventory.BP_IronIngot_Inventory_C",
+    "Стрелы (Arrows)": "/Game/Blueprints/Inventory/Bow/BP_Arrows_Inventory.BP_Arrows_Inventory_C",
+    "Тесак (Cleaver)": "/Game/Blueprints/Inventory/Cleaver/BP_Cleaver_Inventory.BP_Cleaver_Inventory_C",
+    "Топор (Wood Axe)": "/Game/Blueprints/Inventory/WoodAxe/BP_WoodAxe_Inventory.BP_WoodAxe_Inventory_C",
+    "Топливо (Fuel)": "/Game/Blueprints/Inventory/Fuel/BP_Fuel_Inventory.BP_Fuel_Inventory_C",
+    "Топливная бочка (FuelBarrel)": "/Game/Blueprints/Inventory/Powderkeg/BP_FuelBarrel_Inventory.BP_FuelBarrel_Inventory_C",
+    "Фонарь (Lantern)": "/Game/Blueprints/Inventory/Lantern/BP_Lantern_Inventory.BP_Lantern_Inventory_C",
+    "Чай (Tea)": "/Game/Blueprints/Inventory/Tea/BP_Tea_Inventory.BP_Tea_Inventory_C",
+    "Шприц (Syringe)": "/Game/Blueprints/Inventory/Syringe/BP_Syringe_Inventory.BP_Syringe_Inventory_C",
+    "Яд (Poison)": "/Game/Blueprints/Inventory/Poison/BP_Poison_Inventory.BP_Poison_Inventory_C"
+   },
+   "ITEM_CATEGORIES": {
+    "Еда": {
+     "Странное мясо (Strange Meat)": "/Game/Blueprints/Inventory/Meat/BP_StrangeMeat_Inventory.BP_StrangeMeat_Inventory_C",
+     "Мясо животного (Animal Meat)": "/Game/Blueprints/Inventory/Meat/BP_AnimalMeat_Inventory.BP_AnimalMeat_Inventory_C",
+     "Приготовленное мясо (Cooked Meat)": "/Game/Blueprints/Inventory/Meat/BP_CookedMeat_Inventory.BP_CookedMeat_Inventory_C",
+     "Чай (Tea)": "/Game/Blueprints/Inventory/Tea/BP_Tea_Inventory.BP_Tea_Inventory_C"
+    },
+    "Оружие / инструменты": {
+     "Детали ружья (GunParts)": "/Game/Blueprints/Inventory/Pistol/BP_GunParts_Inventory.BP_GunParts_Inventory_C",
+     "Старый пистолет (Pistol)": "/Game/Blueprints/Inventory/Pistol/BP_Pistol_Inventory.BP_Pistol_Inventory_C",
+     "Кирка (Pickaxe)": "/Game/Blueprints/Inventory/Pickaxe/BP_Pickaxe_Inventory.BP_Pickaxe_Inventory_C",
+     "Лопата (Shovel)": "/Game/Blueprints/Inventory/Shovel/BP_Shovel_Inventory.BP_Shovel_Inventory_C",
+     "Лук (Bow)": "/Game/Blueprints/Inventory/Bow/BP_Bow_Inventory.BP_Bow_Inventory_C",
+     "Медвежий капкан (BearTrap)": "/Game/Blueprints/Inventory/BearTrap/BP_BearTrap_Inventory.BP_BearTrap_Inventory_C",
+     "Винтовка (Rifle)": "/Game/Blueprints/Inventory/Rifle/BP_Rifle_Inventory.BP_Rifle_Inventory_C",
+     "Патроны (Pistol Ammo)": "/Game/Blueprints/Inventory/Pistol/BP_Pistol_Ammo_Inventory.BP_Pistol_Ammo_Inventory_C",
+     "Порох (Gunpowder)": "/Game/Blueprints/Inventory/Pistol/BP_Gunpowder_Inventory.BP_Gunpowder_Inventory_C",
+     "Сабля (Sword)": "/Game/Blueprints/Inventory/Sword/BP_Sword_Inventory.BP_Sword_Inventory_C",
+     "Стрелы (Arrows)": "/Game/Blueprints/Inventory/Bow/BP_Arrows_Inventory.BP_Arrows_Inventory_C",
+     "Тесак (Cleaver)": "/Game/Blueprints/Inventory/Cleaver/BP_Cleaver_Inventory.BP_Cleaver_Inventory_C",
+     "Топор (Wood Axe)": "/Game/Blueprints/Inventory/WoodAxe/BP_WoodAxe_Inventory.BP_WoodAxe_Inventory_C"
+    },
+    "Ресурсы / прочее": {
+     "Гвозди (Nails)": "/Game/Blueprints/Inventory/Metals/BP_Nails_Inventory.BP_Nails_Inventory_C",
+     "Камень (Rock)": "/Game/Blueprints/Inventory/Rock/BP_Rock_Inventory.BP_Rock_Inventory_C",
+     "Кость (Club)": "/Game/Blueprints/Inventory/Meat/BP_Club_Inventory.BP_Club_Inventory_C",
+     "Заряд (Charge)": "/Game/Blueprints/Environment/Charge/BP_Charge_Inventory.BP_Charge_Inventory_C",
+     "Палка (Stick)": "/Game/Blueprints/Inventory/Stick/BP_Stick_Inventory.BP_Stick_Inventory_C",
+     "Пороховая бочка (Powderkeg)": "/Game/Blueprints/Inventory/Powderkeg/BP_Powderkeg_Inventory.BP_Powderkeg_Inventory_C",
+     "Противоядие (Antidote)": "/Game/Blueprints/Inventory/Poison/BP_Antidote_Inventory.BP_Antidote_Inventory_C",
+     "Слиток железа (IronIngot)": "/Game/Blueprints/Inventory/Metals/BP_IronIngot_Inventory.BP_IronIngot_Inventory_C",
+     "Топливо (Fuel)": "/Game/Blueprints/Inventory/Fuel/BP_Fuel_Inventory.BP_Fuel_Inventory_C",
+     "Топливная бочка (FuelBarrel)": "/Game/Blueprints/Inventory/Powderkeg/BP_FuelBarrel_Inventory.BP_FuelBarrel_Inventory_C",
+     "Фонарь (Lantern)": "/Game/Blueprints/Inventory/Lantern/BP_Lantern_Inventory.BP_Lantern_Inventory_C",
+     "Шприц (Syringe)": "/Game/Blueprints/Inventory/Syringe/BP_Syringe_Inventory.BP_Syringe_Inventory_C",
+     "Яд (Poison)": "/Game/Blueprints/Inventory/Poison/BP_Poison_Inventory.BP_Poison_Inventory_C"
+    }
+   },
+   "LOCATIONS": {
+    "Скала с зарядом #1": "5153,9200,9200",
+    "Скала с зарядом #2": "6000,8692,8293",
+    "Скала с зарядом #3": "4977,8827,8326"
+   },
+   "MAX_LOCATIONS": 15,
+   "RESTORE_PROPS": [
+    "WarmthBoostRemaining",
+    "StaminaBoostRemaining",
+    "HealthBoostRemaining"
+   ],
+   "RESTORE_VALUE": 1000.0,
+   "SHARE_CHANNEL_ID": 1063
+  },
+  "fmt": "2,-2,3",
+  "out_of_range": {
+   "": true,
+   "1,2": true,
+   "1,2,3": false,
+   "50000,-50000,0": false,
+   "50000.1,0,0": true,
+   "a,b,c": true
+  }
+ },
+ "test_control_panel": {
+  "console": [
+   [
+    "test_game_server_2_host",
+    {
+     "op": "sethuman",
+     "propname": "WarmthBoostRemaining",
+     "role": "Medic",
+     "value": 1000.0
+    }
+   ],
+   [
+    "test_game_server_2_host",
+    {
+     "op": "sethuman",
+     "propname": "StaminaBoostRemaining",
+     "role": "Medic",
+     "value": 1000.0
+    }
+   ],
+   [
+    "test_game_server_2_host",
+    {
+     "op": "sethuman",
+     "propname": "HealthBoostRemaining",
+     "role": "Medic",
+     "value": 1000.0
+    }
+   ],
+   [
+    "test_game_server_2_host",
+    {
+     "msg": "Всем привет",
+     "op": "broadcast"
+    }
+   ]
+  ],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": []
+  },
+  "result": [
+   [
+    [
+     "send",
+     "❌ Сначала выберите роль.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Сначала выберите роль.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Сначала выберите роль.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Сначала выберите роль.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     [
+      "edit",
+      "🎮 **Консоль: Сервер 2**",
+      [
+       "ServerConsoleControlView",
+       null,
+       300,
+       [
+        [
+         "Button",
+         "auto",
+         1,
+         "MinHealth",
+         null,
+         false,
+         [],
+         null,
+         null
+        ],
+        [
+         "Button",
+         "auto",
+         1,
+         "Телепорт",
+         null,
+         false,
+         [],
+         null,
+         null
+        ],
+        [
+         "Button",
+         "auto",
+         1,
+         "Выдать предмет",
+         null,
+         false,
+         [],
+         null,
+         null
+        ],
+        [
+         "Button",
+         "auto",
+         1,
+         "🩹 Восстановить",
+         null,
+         false,
+         [],
+         null,
+         null
+        ],
+        [
+         "Button",
+         "auto",
+         2,
+         "📢 Броадкаст",
+         null,
+         false,
+         [],
+         null,
+         null
+        ],
+        [
+         "ConsoleTargetSelect",
+         "auto",
+         0,
+         null,
+         "Цель: Medic (Медик)",
+         false,
+         [
+          [
+           "Scout (Разведчица)",
+           "Scout",
+           null,
+           false
+          ],
+          [
+           "Commander (Командир)",
+           "Commander",
+           null,
+           false
+          ],
+          [
+           "Priest (Священник)",
+           "Priest",
+           null,
+           false
+          ],
+          [
+           "Medic (Медик)",
+           "Medic",
+           null,
+           false
+          ],
+          [
+           "Mechanic (Механик)",
+           "Mechanic",
+           null,
+           false
+          ],
+          [
+           "Quartermaster (Интендант)",
+           "Quartermaster",
+           null,
+           false
+          ],
+          [
+           "Guard (Охранник)",
+           "Guard",
+           null,
+           false
+          ],
+          [
+           "Pilot (Пилот)",
+           "Pilot",
+           null,
+           false
+          ]
+         ],
+         1,
+         1
+        ]
+       ]
+      ]
+     ]
+    ],
+    "Medic",
+    "Цель: Medic (Медик)"
+   ],
+   [
+    [
+     "modal",
+     [
+      "MinHealthCustomModal",
+      "MinHealth — своё значение",
+      null,
+      [
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Значение (0.0 - 100.0)",
+        "напр. 25.5",
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "Телепорт — Medic:",
+     [
+      "TeleportView",
+      null,
+      120,
+      [
+       [
+        "LocationPresetSelect",
+        "auto",
+        null,
+        null,
+        "Выберите локацию",
+        false,
+        [
+         [
+          "Скала с зарядом #1",
+          "Скала с зарядом #1",
+          "5153,9200,9200",
+          false
+         ],
+         [
+          "Скала с зарядом #2",
+          "Скала с зарядом #2",
+          "6000,8692,8293",
+          false
+         ],
+         [
+          "Скала с зарядом #3",
+          "Скала с зарядом #3",
+          "4977,8827,8326",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "TeleportCustomButton",
+        "auto",
+        null,
+        "Свои координаты",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "RepeatTeleportButton",
+        "auto",
+        null,
+        "🔁 Повторить последний",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "MyLocationsButton",
+        "auto",
+        null,
+        "⭐ Мои координаты",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ],
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "Выдача предмета — Medic:",
+     [
+      "GiveItemView",
+      null,
+      120,
+      [
+       [
+        "ItemCountSelect",
+        "auto",
+        0,
+        null,
+        "Количество: 1",
+        false,
+        [
+         [
+          "1",
+          "1",
+          null,
+          true
+         ],
+         [
+          "2",
+          "2",
+          null,
+          false
+         ],
+         [
+          "3",
+          "3",
+          null,
+          false
+         ],
+         [
+          "4",
+          "4",
+          null,
+          false
+         ],
+         [
+          "5",
+          "5",
+          null,
+          false
+         ],
+         [
+          "6",
+          "6",
+          null,
+          false
+         ],
+         [
+          "7",
+          "7",
+          null,
+          false
+         ],
+         [
+          "8",
+          "8",
+          null,
+          false
+         ],
+         [
+          "9",
+          "9",
+          null,
+          false
+         ],
+         [
+          "10",
+          "10",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemCategorySelect",
+        "auto",
+        1,
+        null,
+        "Категория: Оружие / инструменты",
+        false,
+        [
+         [
+          "Оружие / инструменты",
+          "Оружие / инструменты",
+          null,
+          true
+         ],
+         [
+          "Еда",
+          "Еда",
+          null,
+          false
+         ],
+         [
+          "Ресурсы / прочее",
+          "Ресурсы / прочее",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemSelect",
+        "auto",
+        2,
+        null,
+        "Выберите предмет",
+        false,
+        [
+         [
+          "Топор (Wood Axe)",
+          "Топор (Wood Axe)",
+          null,
+          false
+         ],
+         [
+          "Кирка (Pickaxe)",
+          "Кирка (Pickaxe)",
+          null,
+          false
+         ],
+         [
+          "Сабля (Sword)",
+          "Сабля (Sword)",
+          null,
+          false
+         ],
+         [
+          "Тесак (Cleaver)",
+          "Тесак (Cleaver)",
+          null,
+          false
+         ],
+         [
+          "Лопата (Shovel)",
+          "Лопата (Shovel)",
+          null,
+          false
+         ],
+         [
+          "Лук (Bow)",
+          "Лук (Bow)",
+          null,
+          false
+         ],
+         [
+          "Стрелы (Arrows)",
+          "Стрелы (Arrows)",
+          null,
+          false
+         ],
+         [
+          "Старый пистолет (Pistol)",
+          "Старый пистолет (Pistol)",
+          null,
+          false
+         ],
+         [
+          "Патроны (Pistol Ammo)",
+          "Патроны (Pistol Ammo)",
+          null,
+          false
+         ],
+         [
+          "Порох (Gunpowder)",
+          "Порох (Gunpowder)",
+          null,
+          false
+         ],
+         [
+          "Детали ружья (GunParts)",
+          "Детали ружья (GunParts)",
+          null,
+          false
+         ],
+         [
+          "Медвежий капкан (BearTrap)",
+          "Медвежий капкан (BearTrap)",
+          null,
+          false
+         ],
+         [
+          "Винтовка (Rifle)",
+          "Винтовка (Rifle)",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "Button",
+        "auto",
+        3,
+        "Выдать предметы",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ],
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Medic: тепло, еда и здоровье восстановлены (+1000).",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "modal",
+     [
+      "BroadcastModal",
+      "Сообщение всем игрокам",
+      null,
+      [
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Текст",
+        "Сообщение для всего сервера",
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Сообщение отправлено всем игрокам.",
+     "keep"
+    ]
+   ]
+  ],
+  "shared": []
+ },
+ "test_give_items": {
+  "console": [
+   [
+    "test_game_server_2_host",
+    {
+     "count": 3,
+     "itemname": "/Game/Blueprints/Inventory/Fuel/BP_Fuel_Inventory.BP_Fuel_Inventory_C",
+     "op": "additem",
+     "role": "Pilot"
+    }
+   ]
+  ],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": []
+  },
+  "result": [
+   [
+    "GiveItemView",
+    null,
+    120,
+    [
+     [
+      "ItemCountSelect",
+      "auto",
+      0,
+      null,
+      "Количество: 1",
+      false,
+      [
+       [
+        "1",
+        "1",
+        null,
+        true
+       ],
+       [
+        "2",
+        "2",
+        null,
+        false
+       ],
+       [
+        "3",
+        "3",
+        null,
+        false
+       ],
+       [
+        "4",
+        "4",
+        null,
+        false
+       ],
+       [
+        "5",
+        "5",
+        null,
+        false
+       ],
+       [
+        "6",
+        "6",
+        null,
+        false
+       ],
+       [
+        "7",
+        "7",
+        null,
+        false
+       ],
+       [
+        "8",
+        "8",
+        null,
+        false
+       ],
+       [
+        "9",
+        "9",
+        null,
+        false
+       ],
+       [
+        "10",
+        "10",
+        null,
+        false
+       ]
+      ],
+      1,
+      1
+     ],
+     [
+      "ItemCategorySelect",
+      "auto",
+      1,
+      null,
+      "Категория: Оружие / инструменты",
+      false,
+      [
+       [
+        "Оружие / инструменты",
+        "Оружие / инструменты",
+        null,
+        true
+       ],
+       [
+        "Еда",
+        "Еда",
+        null,
+        false
+       ],
+       [
+        "Ресурсы / прочее",
+        "Ресурсы / прочее",
+        null,
+        false
+       ]
+      ],
+      1,
+      1
+     ],
+     [
+      "ItemSelect",
+      "auto",
+      2,
+      null,
+      "Выберите предмет",
+      false,
+      [
+       [
+        "Топор (Wood Axe)",
+        "Топор (Wood Axe)",
+        null,
+        false
+       ],
+       [
+        "Кирка (Pickaxe)",
+        "Кирка (Pickaxe)",
+        null,
+        false
+       ],
+       [
+        "Сабля (Sword)",
+        "Сабля (Sword)",
+        null,
+        false
+       ],
+       [
+        "Тесак (Cleaver)",
+        "Тесак (Cleaver)",
+        null,
+        false
+       ],
+       [
+        "Лопата (Shovel)",
+        "Лопата (Shovel)",
+        null,
+        false
+       ],
+       [
+        "Лук (Bow)",
+        "Лук (Bow)",
+        null,
+        false
+       ],
+       [
+        "Стрелы (Arrows)",
+        "Стрелы (Arrows)",
+        null,
+        false
+       ],
+       [
+        "Старый пистолет (Pistol)",
+        "Старый пистолет (Pistol)",
+        null,
+        false
+       ],
+       [
+        "Патроны (Pistol Ammo)",
+        "Патроны (Pistol Ammo)",
+        null,
+        false
+       ],
+       [
+        "Порох (Gunpowder)",
+        "Порох (Gunpowder)",
+        null,
+        false
+       ],
+       [
+        "Детали ружья (GunParts)",
+        "Детали ружья (GunParts)",
+        null,
+        false
+       ],
+       [
+        "Медвежий капкан (BearTrap)",
+        "Медвежий капкан (BearTrap)",
+        null,
+        false
+       ],
+       [
+        "Винтовка (Rifle)",
+        "Винтовка (Rifle)",
+        null,
+        false
+       ]
+      ],
+      1,
+      1
+     ],
+     [
+      "Button",
+      "auto",
+      3,
+      "Выдать предметы",
+      null,
+      false,
+      [],
+      null,
+      null
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Сначала выберите предмет.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     null,
+     [
+      "GiveItemView",
+      null,
+      120,
+      [
+       [
+        "ItemCountSelect",
+        "auto",
+        0,
+        null,
+        "Количество: 3",
+        false,
+        [
+         [
+          "1",
+          "1",
+          null,
+          false
+         ],
+         [
+          "2",
+          "2",
+          null,
+          false
+         ],
+         [
+          "3",
+          "3",
+          null,
+          true
+         ],
+         [
+          "4",
+          "4",
+          null,
+          false
+         ],
+         [
+          "5",
+          "5",
+          null,
+          false
+         ],
+         [
+          "6",
+          "6",
+          null,
+          false
+         ],
+         [
+          "7",
+          "7",
+          null,
+          false
+         ],
+         [
+          "8",
+          "8",
+          null,
+          false
+         ],
+         [
+          "9",
+          "9",
+          null,
+          false
+         ],
+         [
+          "10",
+          "10",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemCategorySelect",
+        "auto",
+        1,
+        null,
+        "Категория: Оружие / инструменты",
+        false,
+        [
+         [
+          "Оружие / инструменты",
+          "Оружие / инструменты",
+          null,
+          true
+         ],
+         [
+          "Еда",
+          "Еда",
+          null,
+          false
+         ],
+         [
+          "Ресурсы / прочее",
+          "Ресурсы / прочее",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemSelect",
+        "auto",
+        2,
+        null,
+        "Выберите предмет",
+        false,
+        [
+         [
+          "Топор (Wood Axe)",
+          "Топор (Wood Axe)",
+          null,
+          false
+         ],
+         [
+          "Кирка (Pickaxe)",
+          "Кирка (Pickaxe)",
+          null,
+          false
+         ],
+         [
+          "Сабля (Sword)",
+          "Сабля (Sword)",
+          null,
+          false
+         ],
+         [
+          "Тесак (Cleaver)",
+          "Тесак (Cleaver)",
+          null,
+          false
+         ],
+         [
+          "Лопата (Shovel)",
+          "Лопата (Shovel)",
+          null,
+          false
+         ],
+         [
+          "Лук (Bow)",
+          "Лук (Bow)",
+          null,
+          false
+         ],
+         [
+          "Стрелы (Arrows)",
+          "Стрелы (Arrows)",
+          null,
+          false
+         ],
+         [
+          "Старый пистолет (Pistol)",
+          "Старый пистолет (Pistol)",
+          null,
+          false
+         ],
+         [
+          "Патроны (Pistol Ammo)",
+          "Патроны (Pistol Ammo)",
+          null,
+          false
+         ],
+         [
+          "Порох (Gunpowder)",
+          "Порох (Gunpowder)",
+          null,
+          false
+         ],
+         [
+          "Детали ружья (GunParts)",
+          "Детали ружья (GunParts)",
+          null,
+          false
+         ],
+         [
+          "Медвежий капкан (BearTrap)",
+          "Медвежий капкан (BearTrap)",
+          null,
+          false
+         ],
+         [
+          "Винтовка (Rifle)",
+          "Винтовка (Rifle)",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "Button",
+        "auto",
+        3,
+        "Выдать предметы",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     null,
+     [
+      "GiveItemView",
+      null,
+      120,
+      [
+       [
+        "ItemCountSelect",
+        "auto",
+        0,
+        null,
+        "Количество: 3",
+        false,
+        [
+         [
+          "1",
+          "1",
+          null,
+          false
+         ],
+         [
+          "2",
+          "2",
+          null,
+          false
+         ],
+         [
+          "3",
+          "3",
+          null,
+          true
+         ],
+         [
+          "4",
+          "4",
+          null,
+          false
+         ],
+         [
+          "5",
+          "5",
+          null,
+          false
+         ],
+         [
+          "6",
+          "6",
+          null,
+          false
+         ],
+         [
+          "7",
+          "7",
+          null,
+          false
+         ],
+         [
+          "8",
+          "8",
+          null,
+          false
+         ],
+         [
+          "9",
+          "9",
+          null,
+          false
+         ],
+         [
+          "10",
+          "10",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemCategorySelect",
+        "auto",
+        1,
+        null,
+        "Категория: Еда",
+        false,
+        [
+         [
+          "Оружие / инструменты",
+          "Оружие / инструменты",
+          null,
+          false
+         ],
+         [
+          "Еда",
+          "Еда",
+          null,
+          true
+         ],
+         [
+          "Ресурсы / прочее",
+          "Ресурсы / прочее",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemSelect",
+        "auto",
+        2,
+        null,
+        "Выберите предмет",
+        false,
+        [
+         [
+          "Мясо животного (Animal Meat)",
+          "Мясо животного (Animal Meat)",
+          null,
+          false
+         ],
+         [
+          "Странное мясо (Strange Meat)",
+          "Странное мясо (Strange Meat)",
+          null,
+          false
+         ],
+         [
+          "Приготовленное мясо (Cooked Meat)",
+          "Приготовленное мясо (Cooked Meat)",
+          null,
+          false
+         ],
+         [
+          "Чай (Tea)",
+          "Чай (Tea)",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "Button",
+        "auto",
+        3,
+        "Выдать предметы",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     null,
+     [
+      "GiveItemView",
+      null,
+      120,
+      [
+       [
+        "ItemCountSelect",
+        "auto",
+        0,
+        null,
+        "Количество: 3",
+        false,
+        [
+         [
+          "1",
+          "1",
+          null,
+          false
+         ],
+         [
+          "2",
+          "2",
+          null,
+          false
+         ],
+         [
+          "3",
+          "3",
+          null,
+          true
+         ],
+         [
+          "4",
+          "4",
+          null,
+          false
+         ],
+         [
+          "5",
+          "5",
+          null,
+          false
+         ],
+         [
+          "6",
+          "6",
+          null,
+          false
+         ],
+         [
+          "7",
+          "7",
+          null,
+          false
+         ],
+         [
+          "8",
+          "8",
+          null,
+          false
+         ],
+         [
+          "9",
+          "9",
+          null,
+          false
+         ],
+         [
+          "10",
+          "10",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemCategorySelect",
+        "auto",
+        1,
+        null,
+        "Категория: Еда",
+        false,
+        [
+         [
+          "Оружие / инструменты",
+          "Оружие / инструменты",
+          null,
+          false
+         ],
+         [
+          "Еда",
+          "Еда",
+          null,
+          true
+         ],
+         [
+          "Ресурсы / прочее",
+          "Ресурсы / прочее",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemSelect",
+        "auto",
+        2,
+        null,
+        "Предмет: Чай (Tea)",
+        false,
+        [
+         [
+          "Мясо животного (Animal Meat)",
+          "Мясо животного (Animal Meat)",
+          null,
+          false
+         ],
+         [
+          "Странное мясо (Strange Meat)",
+          "Странное мясо (Strange Meat)",
+          null,
+          false
+         ],
+         [
+          "Приготовленное мясо (Cooked Meat)",
+          "Приготовленное мясо (Cooked Meat)",
+          null,
+          false
+         ],
+         [
+          "Чай (Tea)",
+          "Чай (Tea)",
+          null,
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "Button",
+        "auto",
+        3,
+        "Выдать предметы",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     null,
+     [
+      "GiveItemView",
+      null,
+      120,
+      [
+       [
+        "ItemCountSelect",
+        "auto",
+        0,
+        null,
+        "Количество: 3",
+        false,
+        [
+         [
+          "1",
+          "1",
+          null,
+          false
+         ],
+         [
+          "2",
+          "2",
+          null,
+          false
+         ],
+         [
+          "3",
+          "3",
+          null,
+          true
+         ],
+         [
+          "4",
+          "4",
+          null,
+          false
+         ],
+         [
+          "5",
+          "5",
+          null,
+          false
+         ],
+         [
+          "6",
+          "6",
+          null,
+          false
+         ],
+         [
+          "7",
+          "7",
+          null,
+          false
+         ],
+         [
+          "8",
+          "8",
+          null,
+          false
+         ],
+         [
+          "9",
+          "9",
+          null,
+          false
+         ],
+         [
+          "10",
+          "10",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemCategorySelect",
+        "auto",
+        1,
+        null,
+        "Категория: Ресурсы / прочее",
+        false,
+        [
+         [
+          "Оружие / инструменты",
+          "Оружие / инструменты",
+          null,
+          false
+         ],
+         [
+          "Еда",
+          "Еда",
+          null,
+          false
+         ],
+         [
+          "Ресурсы / прочее",
+          "Ресурсы / прочее",
+          null,
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemSelect",
+        "auto",
+        2,
+        null,
+        "Выберите предмет",
+        false,
+        [
+         [
+          "Заряд (Charge)",
+          "Заряд (Charge)",
+          null,
+          false
+         ],
+         [
+          "Пороховая бочка (Powderkeg)",
+          "Пороховая бочка (Powderkeg)",
+          null,
+          false
+         ],
+         [
+          "Шприц (Syringe)",
+          "Шприц (Syringe)",
+          null,
+          false
+         ],
+         [
+          "Кость (Club)",
+          "Кость (Club)",
+          null,
+          false
+         ],
+         [
+          "Камень (Rock)",
+          "Камень (Rock)",
+          null,
+          false
+         ],
+         [
+          "Палка (Stick)",
+          "Палка (Stick)",
+          null,
+          false
+         ],
+         [
+          "Топливная бочка (FuelBarrel)",
+          "Топливная бочка (FuelBarrel)",
+          null,
+          false
+         ],
+         [
+          "Топливо (Fuel)",
+          "Топливо (Fuel)",
+          null,
+          false
+         ],
+         [
+          "Гвозди (Nails)",
+          "Гвозди (Nails)",
+          null,
+          false
+         ],
+         [
+          "Слиток железа (IronIngot)",
+          "Слиток железа (IronIngot)",
+          null,
+          false
+         ],
+         [
+          "Фонарь (Lantern)",
+          "Фонарь (Lantern)",
+          null,
+          false
+         ],
+         [
+          "Яд (Poison)",
+          "Яд (Poison)",
+          null,
+          false
+         ],
+         [
+          "Противоядие (Antidote)",
+          "Противоядие (Antidote)",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "Button",
+        "auto",
+        3,
+        "Выдать предметы",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     null,
+     [
+      "GiveItemView",
+      null,
+      120,
+      [
+       [
+        "ItemCountSelect",
+        "auto",
+        0,
+        null,
+        "Количество: 3",
+        false,
+        [
+         [
+          "1",
+          "1",
+          null,
+          false
+         ],
+         [
+          "2",
+          "2",
+          null,
+          false
+         ],
+         [
+          "3",
+          "3",
+          null,
+          true
+         ],
+         [
+          "4",
+          "4",
+          null,
+          false
+         ],
+         [
+          "5",
+          "5",
+          null,
+          false
+         ],
+         [
+          "6",
+          "6",
+          null,
+          false
+         ],
+         [
+          "7",
+          "7",
+          null,
+          false
+         ],
+         [
+          "8",
+          "8",
+          null,
+          false
+         ],
+         [
+          "9",
+          "9",
+          null,
+          false
+         ],
+         [
+          "10",
+          "10",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemCategorySelect",
+        "auto",
+        1,
+        null,
+        "Категория: Ресурсы / прочее",
+        false,
+        [
+         [
+          "Оружие / инструменты",
+          "Оружие / инструменты",
+          null,
+          false
+         ],
+         [
+          "Еда",
+          "Еда",
+          null,
+          false
+         ],
+         [
+          "Ресурсы / прочее",
+          "Ресурсы / прочее",
+          null,
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ItemSelect",
+        "auto",
+        2,
+        null,
+        "Предмет: Топливо (Fuel)",
+        false,
+        [
+         [
+          "Заряд (Charge)",
+          "Заряд (Charge)",
+          null,
+          false
+         ],
+         [
+          "Пороховая бочка (Powderkeg)",
+          "Пороховая бочка (Powderkeg)",
+          null,
+          false
+         ],
+         [
+          "Шприц (Syringe)",
+          "Шприц (Syringe)",
+          null,
+          false
+         ],
+         [
+          "Кость (Club)",
+          "Кость (Club)",
+          null,
+          false
+         ],
+         [
+          "Камень (Rock)",
+          "Камень (Rock)",
+          null,
+          false
+         ],
+         [
+          "Палка (Stick)",
+          "Палка (Stick)",
+          null,
+          false
+         ],
+         [
+          "Топливная бочка (FuelBarrel)",
+          "Топливная бочка (FuelBarrel)",
+          null,
+          false
+         ],
+         [
+          "Топливо (Fuel)",
+          "Топливо (Fuel)",
+          null,
+          true
+         ],
+         [
+          "Гвозди (Nails)",
+          "Гвозди (Nails)",
+          null,
+          false
+         ],
+         [
+          "Слиток железа (IronIngot)",
+          "Слиток железа (IronIngot)",
+          null,
+          false
+         ],
+         [
+          "Фонарь (Lantern)",
+          "Фонарь (Lantern)",
+          null,
+          false
+         ],
+         [
+          "Яд (Poison)",
+          "Яд (Poison)",
+          null,
+          false
+         ],
+         [
+          "Противоядие (Antidote)",
+          "Противоядие (Antidote)",
+          null,
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "Button",
+        "auto",
+        3,
+        "Выдать предметы",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Pilot: выдано Топливо (Fuel) × 3",
+     "keep"
+    ]
+   ]
+  ],
+  "shared": []
+ },
+ "test_global_locations": {
+  "console": [],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": [
+    {
+     "locations": [
+      {
+       "coords": "1,2,3",
+       "name": "Скала с зарядом #2"
+      },
+      {
+       "coords": "-100,200,300",
+       "name": "Маяк"
+      },
+      {
+       "coords": "1,1,1",
+       "name": "Скала с зарядом #1"
+      }
+     ],
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+     "user_id": "__global__"
+    }
+   ]
+  },
+  "result": [
+   [
+    [
+     "send",
+     "❌ Только модераторы/админы.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Недостаточно прав.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "🌐 **Глобальные точки** (всего 4, из них в БД 2)\nВидны всем игрокам в списке телепорта. Базовые пресеты из кода удалять нельзя.",
+     [
+      "GlobalManageView",
+      null,
+      180,
+      [
+       [
+        "GlobalDeleteSelect",
+        "auto",
+        null,
+        null,
+        "Удалить глобальную точку",
+        false,
+        [
+         [
+          "Скала с зарядом #2",
+          "Скала с зарядом #2",
+          "1,2,3",
+          false
+         ],
+         [
+          "Маяк",
+          "Маяк",
+          "-100,200,300",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddGlobalButton",
+        "auto",
+        null,
+        "➕ Добавить глобальную",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ],
+     true
+    ]
+   ],
+   [
+    [
+     "modal",
+     [
+      "AddGlobalModal",
+      "Глобальная точка",
+      null,
+      [
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Название",
+        "напр. Скала с зарядом",
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "TextInput",
+        "auto",
+        null,
+        "X",
+        null,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Y",
+        null,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Z",
+        null,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Глобальная точка сохранена: **Новая** (5,1,1)\n\n🌐 **Глобальные точки** (всего 5, из них в БД 3)\nВидны всем игрокам в списке телепорта. Базовые пресеты из кода удалять нельзя.",
+     [
+      "GlobalManageView",
+      null,
+      180,
+      [
+       [
+        "GlobalDeleteSelect",
+        "auto",
+        null,
+        null,
+        "Удалить глобальную точку",
+        false,
+        [
+         [
+          "Скала с зарядом #2",
+          "Скала с зарядом #2",
+          "1,2,3",
+          false
+         ],
+         [
+          "Маяк",
+          "Маяк",
+          "-100,200,300",
+          false
+         ],
+         [
+          "Новая",
+          "Новая",
+          "5,1,1",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddGlobalButton",
+        "auto",
+        null,
+        "➕ Добавить глобальную",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Координаты должны быть числами.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Глобальная точка сохранена: **Скала с зарядом #1** (1,1,1)\n\n🌐 **Глобальные точки** (всего 5, из них в БД 4)\nВидны всем игрокам в списке телепорта. Базовые пресеты из кода удалять нельзя.",
+     [
+      "GlobalManageView",
+      null,
+      180,
+      [
+       [
+        "GlobalDeleteSelect",
+        "auto",
+        null,
+        null,
+        "Удалить глобальную точку",
+        false,
+        [
+         [
+          "Скала с зарядом #2",
+          "Скала с зарядом #2",
+          "1,2,3",
+          false
+         ],
+         [
+          "Маяк",
+          "Маяк",
+          "-100,200,300",
+          false
+         ],
+         [
+          "Новая",
+          "Новая",
+          "5,1,1",
+          false
+         ],
+         [
+          "Скала с зарядом #1",
+          "Скала с зарядом #1",
+          "1,1,1",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddGlobalButton",
+        "auto",
+        null,
+        "➕ Добавить глобальную",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    {
+     "Маяк": "-100,200,300",
+     "Новая": "5,1,1",
+     "Скала с зарядом #1": "1,1,1",
+     "Скала с зарядом #2": "1,2,3",
+     "Скала с зарядом #3": "4977,8827,8326"
+    },
+    {
+     "Маяк": "-100,200,300",
+     "Новая": "5,1,1",
+     "Скала с зарядом #1": "1,1,1",
+     "Скала с зарядом #2": "1,2,3"
+    }
+   ],
+   [
+    [
+     "send",
+     "❌ Недостаточно прав.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "🌐 **Глобальные точки** (всего 4, из них в БД 3)\nВидны всем игрокам в списке телепорта. Базовые пресеты из кода удалять нельзя.",
+     [
+      "GlobalManageView",
+      null,
+      180,
+      [
+       [
+        "GlobalDeleteSelect",
+        "auto",
+        null,
+        null,
+        "Удалить глобальную точку",
+        false,
+        [
+         [
+          "Скала с зарядом #2",
+          "Скала с зарядом #2",
+          "1,2,3",
+          false
+         ],
+         [
+          "Маяк",
+          "Маяк",
+          "-100,200,300",
+          false
+         ],
+         [
+          "Скала с зарядом #1",
+          "Скала с зарядом #1",
+          "1,1,1",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddGlobalButton",
+        "auto",
+        null,
+        "➕ Добавить глобальную",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ]
+  ],
+  "shared": []
+ },
+ "test_minhealth": {
+  "console": [
+   [
+    "test_game_server_3_host",
+    {
+     "op": "sethuman",
+     "propname": "MinHealth",
+     "role": "Commander",
+     "value": 25.5
+    }
+   ],
+   [
+    "test_game_server_3_host",
+    {
+     "op": "sethuman",
+     "propname": "MinHealth",
+     "role": "Commander",
+     "value": 0.0
+    }
+   ]
+  ],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": []
+  },
+  "result": [
+   [
+    [
+     "edit",
+     "✅ Commander: MinHealth = 25.5",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Некорректное число.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Commander: MinHealth = 0.0",
+     "keep"
+    ]
+   ]
+  ],
+  "shared": []
+ },
+ "test_my_locations_and_sharing": {
+  "console": [
+   [
+    "test_game_server_1_host",
+    {
+     "location": "7,8,9",
+     "op": "TeleportPlayerToLocation",
+     "role": "Scout"
+    }
+   ],
+   [
+    "test_game_server_1_host",
+    {
+     "location": "4,5,6",
+     "op": "TeleportPlayerToLocation",
+     "role": "Scout"
+    }
+   ]
+  ],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": [
+    {
+     "last_coords": "4,5,6",
+     "locations": [
+      {
+       "coords": "7,8,9",
+       "name": "Последняя"
+      }
+     ],
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+     "user_id": "42"
+    },
+    {
+     "locations": [
+      {
+       "coords": "1,-2,3",
+       "name": "Точка|с чертой"
+      }
+     ],
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+     "user_id": "77"
+    },
+    {
+     "locations": [
+      {
+       "coords": "0,0,0",
+       "name": "p0"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p1"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p2"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p4"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p5"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p6"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p7"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p8"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p9"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p10"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p11"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p12"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p13"
+      },
+      {
+       "coords": "0,0,0",
+       "name": "p14"
+      },
+      {
+       "coords": "1,1,1",
+       "name": "p3"
+      }
+     ],
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+     "user_id": "78"
+    }
+   ]
+  },
+  "result": [
+   [
+    [
+     "send",
+     "⭐ **Мои сохранённые локации** (0/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ],
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Сохранено: **База** (1,2,3)\n\n⭐ **Мои сохранённые локации** (1/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "1,2,3",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "1,2,3",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "1,2,3",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Координаты должны быть числами.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Координаты вне диапазона (от -50000 до 50000). Не сохранено.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Сохранено: **База** (4,5,6)\n\n⭐ **Мои сохранённые локации** (1/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Нет последних координат. Сначала телепортируйтесь по своим координатам.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "modal",
+     [
+      "SaveLastModal",
+      "Сохранить последнюю точку",
+      null,
+      [
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Название",
+        "напр. Скала с зарядом",
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Сохранено: **Последняя** (7,8,9)\n\n⭐ **Мои сохранённые локации** (2/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   "⭐ **Мои сохранённые локации** (2/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+   [
+    [
+     "edit",
+     "✅ Scout телепортирован в (4,5,6)",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Локация не найдена (возможно, удалена).",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Опубликовано в канал: **Последняя** (7,8,9)",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "GlobalManageButton",
+        "auto",
+        null,
+        "🌐 Глобальные (модер)",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "❌ Канал для шаринга не найден.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "База",
+          "База",
+          "4,5,6",
+          false
+         ],
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "GlobalManageButton",
+        "auto",
+        null,
+        "🌐 Глобальные (модер)",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    [
+     "edit",
+     "⭐ **Мои сохранённые локации** (1/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "Последняя",
+          "Последняя",
+          "7,8,9",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ],
+   [
+    "shareloc:Точка/с чертой|1,-2,3",
+    "➕ Добавить себе: Точка/с чертой"
+   ],
+   [
+    "shareloc:Очень длинное название точки Очень длинное название точки Очень длинное название точки Очень длинное название точки |5,5,5",
+    "➕ Добавить себе: Очень длинное название точки Очень длинное название точки Очень"
+   ],
+   [
+    [
+     "send",
+     "✅ Добавлено в ваши точки: **Точка|с чертой** (1,-2,3)",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Достигнут лимит 15 точек. Удалите ненужную или введите название существующей, чтобы заменить её.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Сохранено: **p3** (1,1,1)\n\n⭐ **Мои сохранённые локации** (15/15)\nВыберите для телепорта, удалите ненужную, добавьте новую или сохраните последнюю использованную точку.",
+     [
+      "MyLocationsView",
+      null,
+      180,
+      [
+       [
+        "MyLocationSelect",
+        "auto",
+        0,
+        null,
+        "Телепорт в сохранённую локацию",
+        false,
+        [
+         [
+          "p0",
+          "p0",
+          "0,0,0",
+          false
+         ],
+         [
+          "p1",
+          "p1",
+          "0,0,0",
+          false
+         ],
+         [
+          "p2",
+          "p2",
+          "0,0,0",
+          false
+         ],
+         [
+          "p4",
+          "p4",
+          "0,0,0",
+          false
+         ],
+         [
+          "p5",
+          "p5",
+          "0,0,0",
+          false
+         ],
+         [
+          "p6",
+          "p6",
+          "0,0,0",
+          false
+         ],
+         [
+          "p7",
+          "p7",
+          "0,0,0",
+          false
+         ],
+         [
+          "p8",
+          "p8",
+          "0,0,0",
+          false
+         ],
+         [
+          "p9",
+          "p9",
+          "0,0,0",
+          false
+         ],
+         [
+          "p10",
+          "p10",
+          "0,0,0",
+          false
+         ],
+         [
+          "p11",
+          "p11",
+          "0,0,0",
+          false
+         ],
+         [
+          "p12",
+          "p12",
+          "0,0,0",
+          false
+         ],
+         [
+          "p13",
+          "p13",
+          "0,0,0",
+          false
+         ],
+         [
+          "p14",
+          "p14",
+          "0,0,0",
+          false
+         ],
+         [
+          "p3",
+          "p3",
+          "1,1,1",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MyLocationDeleteSelect",
+        "auto",
+        1,
+        null,
+        "Удалить локацию",
+        false,
+        [
+         [
+          "p0",
+          "p0",
+          "0,0,0",
+          false
+         ],
+         [
+          "p1",
+          "p1",
+          "0,0,0",
+          false
+         ],
+         [
+          "p2",
+          "p2",
+          "0,0,0",
+          false
+         ],
+         [
+          "p4",
+          "p4",
+          "0,0,0",
+          false
+         ],
+         [
+          "p5",
+          "p5",
+          "0,0,0",
+          false
+         ],
+         [
+          "p6",
+          "p6",
+          "0,0,0",
+          false
+         ],
+         [
+          "p7",
+          "p7",
+          "0,0,0",
+          false
+         ],
+         [
+          "p8",
+          "p8",
+          "0,0,0",
+          false
+         ],
+         [
+          "p9",
+          "p9",
+          "0,0,0",
+          false
+         ],
+         [
+          "p10",
+          "p10",
+          "0,0,0",
+          false
+         ],
+         [
+          "p11",
+          "p11",
+          "0,0,0",
+          false
+         ],
+         [
+          "p12",
+          "p12",
+          "0,0,0",
+          false
+         ],
+         [
+          "p13",
+          "p13",
+          "0,0,0",
+          false
+         ],
+         [
+          "p14",
+          "p14",
+          "0,0,0",
+          false
+         ],
+         [
+          "p3",
+          "p3",
+          "1,1,1",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ShareLocationSelect",
+        "auto",
+        3,
+        null,
+        "📤 Поделиться локацией",
+        false,
+        [
+         [
+          "p0",
+          "p0",
+          "0,0,0",
+          false
+         ],
+         [
+          "p1",
+          "p1",
+          "0,0,0",
+          false
+         ],
+         [
+          "p2",
+          "p2",
+          "0,0,0",
+          false
+         ],
+         [
+          "p4",
+          "p4",
+          "0,0,0",
+          false
+         ],
+         [
+          "p5",
+          "p5",
+          "0,0,0",
+          false
+         ],
+         [
+          "p6",
+          "p6",
+          "0,0,0",
+          false
+         ],
+         [
+          "p7",
+          "p7",
+          "0,0,0",
+          false
+         ],
+         [
+          "p8",
+          "p8",
+          "0,0,0",
+          false
+         ],
+         [
+          "p9",
+          "p9",
+          "0,0,0",
+          false
+         ],
+         [
+          "p10",
+          "p10",
+          "0,0,0",
+          false
+         ],
+         [
+          "p11",
+          "p11",
+          "0,0,0",
+          false
+         ],
+         [
+          "p12",
+          "p12",
+          "0,0,0",
+          false
+         ],
+         [
+          "p13",
+          "p13",
+          "0,0,0",
+          false
+         ],
+         [
+          "p14",
+          "p14",
+          "0,0,0",
+          false
+         ],
+         [
+          "p3",
+          "p3",
+          "1,1,1",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "AddLocationButton",
+        "auto",
+        2,
+        "➕ Добавить",
+        null,
+        false,
+        [],
+        null,
+        null
+       ],
+       [
+        "SaveLastButton",
+        "auto",
+        2,
+        "💾 Сохранить последнюю",
+        null,
+        false,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ]
+  ],
+  "shared": [
+   [
+    "📍 **User42** делится координатами: **Последняя** (7,8,9)\nНажмите кнопку, чтобы добавить в свои сохранённые.",
+    [
+     "View",
+     null,
+     null,
+     [
+      [
+       "Button",
+       "shareloc:Последняя|7,8,9",
+       null,
+       "➕ Добавить себе: Последняя",
+       null,
+       false,
+       [],
+       null,
+       null
+      ]
+     ]
+    ]
+   ]
+  ]
+ },
+ "test_teleport": {
+  "console": [
+   [
+    "test_game_server_1_host",
+    {
+     "location": "11,-20,30",
+     "op": "TeleportPlayerToLocation",
+     "role": "Scout"
+    }
+   ],
+   [
+    "test_game_server_1_host",
+    {
+     "location": "-50000,50000,0",
+     "op": "TeleportPlayerToLocation",
+     "role": "Scout"
+    }
+   ],
+   [
+    "test_game_server_2_host",
+    {
+     "location": "-100,200,300",
+     "op": "TeleportPlayerToLocation",
+     "role": "Quartermaster"
+    }
+   ],
+   [
+    "test_game_server_2_host",
+    {
+     "location": "5153,9200,9200",
+     "op": "TeleportPlayerToLocation",
+     "role": "Quartermaster"
+    }
+   ],
+   [
+    "test_game_server_3_host",
+    {
+     "location": "5153,9200,9200",
+     "op": "TeleportPlayerToLocation",
+     "role": "Guard"
+    }
+   ]
+  ],
+  "db": {
+   "console_access_col": [],
+   "player_locations_col": [
+    {
+     "last_coords": "5153,9200,9200",
+     "user_id": "42"
+    },
+    {
+     "locations": [
+      {
+       "coords": "1,2,3",
+       "name": "Скала с зарядом #2"
+      },
+      {
+       "coords": "-100,200,300",
+       "name": "Маяк"
+      }
+     ],
+     "user_id": "__global__"
+    }
+   ]
+  },
+  "result": [
+   [
+    "TeleportView",
+    null,
+    120,
+    [
+     [
+      "LocationPresetSelect",
+      "auto",
+      null,
+      null,
+      "Выберите локацию",
+      false,
+      [
+       [
+        "Скала с зарядом #1",
+        "Скала с зарядом #1",
+        "5153,9200,9200",
+        false
+       ],
+       [
+        "Скала с зарядом #2",
+        "Скала с зарядом #2",
+        "1,2,3",
+        false
+       ],
+       [
+        "Скала с зарядом #3",
+        "Скала с зарядом #3",
+        "4977,8827,8326",
+        false
+       ],
+       [
+        "Маяк",
+        "Маяк",
+        "-100,200,300",
+        false
+       ]
+      ],
+      1,
+      1
+     ],
+     [
+      "TeleportCustomButton",
+      "auto",
+      null,
+      "Свои координаты",
+      null,
+      false,
+      [],
+      null,
+      null
+     ],
+     [
+      "RepeatTeleportButton",
+      "auto",
+      null,
+      "🔁 Повторить последний",
+      null,
+      false,
+      [],
+      null,
+      null
+     ],
+     [
+      "MyLocationsButton",
+      "auto",
+      null,
+      "⭐ Мои координаты",
+      null,
+      false,
+      [],
+      null,
+      null
+     ]
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Нет последнего телепорта.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Scout телепортирован в (11,-20,30)",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Координаты должны быть числами.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "❌ Координаты вне допустимого диапазона (от -50000 до 50000). Телепорт отменён.",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Scout телепортирован в (-50000,50000,0)",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Quartermaster телепортирован в (-100,200,300)",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Quartermaster телепортирован в (5153,9200,9200)",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "send",
+     "❌ Локация не найдена.",
+     null,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Guard телепортирован в (5153,9200,9200)",
+     "keep"
+    ]
+   ],
+   [
+    [
+     "modal",
+     [
+      "TeleportModal",
+      "Телепортация — координаты",
+      null,
+      [
+       [
+        "TextInput",
+        "auto",
+        null,
+        "X",
+        null,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Y",
+        null,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "TextInput",
+        "auto",
+        null,
+        "Z",
+        null,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    ]
+   ]
+  ],
+  "shared": []
+ }
+}

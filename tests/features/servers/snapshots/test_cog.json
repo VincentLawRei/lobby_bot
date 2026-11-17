@@ -1,0 +1,8510 @@
+{
+ "test_auto_stop[None]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "unknown",
+     "host_name": "Неизвестно",
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    },
+    {
+     "host_id": "2",
+     "host_name": "short",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 1, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame6",
+     "started_at": null
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "⏰ Сервер остановлен автоматически",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1 (Франкфурт)",
+        false
+       ],
+       [
+        "Хост",
+        "long",
+        false
+       ],
+       [
+        "Причина",
+        "Сервер работал более 1 часа",
+        false
+       ]
+      ],
+      null
+     ]
+    }
+   ],
+   [
+    1051,
+    "fetch",
+    42
+   ],
+   [
+    1051,
+    "message.edit",
+    42,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):** 🟢 Свободен\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: Неизвестно\n⏱️ 0 мин. назад\n\n**Сервер #2 (Франкфурт 2):**\n✅ Запущен\n👤 Хост: short\n⏱️ 59 мин. назад\n\n\nВедётся подсчёт [статистики](https://example.org/players_graph.html)\n\n</srv:100000000000000002> - ЗАПУСТИТЬ сервер\n</player:100000000000000001> - получить информацию об отдельном игроке\n</leaderboard:100000000000000007> - открыть ранговую таблицу\n\n</stop:100000000000000003> - ОСТАНОВИТЬ сервер\n</crew_win:100000000000000004> - засчитать ПОБЕДУ МИРНЫМ\n</traitors_win:100000000000000005> - засчитать ПОБЕДУ ПРЕДАТЕЛЯМ\n\n</useful_things:100000000000000006> - получить доп. информацию по игре\n</report:100000000000000008> - закинуть репортик\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -X quit"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_auto_stop[channels1]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame4",
+     "started_at": null
+    },
+    {
+     "host_id": "2",
+     "host_name": "short",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 1, 30, 123000)"
+    },
+    {
+     "host_id": "3",
+     "host_name": "nostart",
+     "server": "sdgame6"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -X quit"
+   ]
+  ]
+ },
+ "test_create_initial_panel[False-False-disabled1]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame6",
+     "started_at": null
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [],
+  "result": null,
+  "ssh": []
+ },
+ "test_create_initial_panel[False-True-disabled2]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame5",
+     "started_at": null
+    },
+    {
+     "host_id": "unknown",
+     "host_name": "Неизвестно",
+     "server": "sdgame6",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 7001
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1051,
+    "send",
+    null,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):**\n✅ Запущен\n👤 Хост: Неизвестно\n⏱️ 0 мин. назад\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: user100\n⏱️ 20 мин. назад\n\n**Сервер #2 (Франкфурт 2):** 🟢 Свободен\n\n\n*</srv:100000000000000002> для запуска сервера*\n\n*</stop:100000000000000003> для остановки своего сервера*\n*</crew_win:100000000000000004> для того, чтобы дать победу мирным*\n*</traitors_win:100000000000000005> для того, чтобы дать победу предателям*\n\n*</useful_things:100000000000000006> для того, чтобы получить полезные ссылки по SDG*\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ],
+     "view": [
+      "ServerPanelView",
+      null,
+      [
+       [
+        "Button",
+        "game_refresh",
+        null,
+        "🔄 Обновить",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_configure",
+        null,
+        "⚙️ СОЗДАТЬ СЕРВЕР",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_reserve",
+        null,
+        "🔒 Зарезервировать",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_server_info",
+        2,
+        "ℹ️ Информация о сервере",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_islands",
+        2,
+        "🗿 Острова",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_want_host",
+        2,
+        "🎮 Хочу хостить (запрос доступа)",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_console_open",
+        1,
+        "🎮 Открыть консоль",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_console_access",
+        1,
+        "👥 Дать доступ к консоли",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        null,
+        1,
+        "🎞️ Посмотреть реплеи",
+        "ButtonStyle.link",
+        "https://example.org/map/",
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_create_initial_panel[False-True-disabled3]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame5",
+     "started_at": null
+    },
+    {
+     "host_id": "unknown",
+     "host_name": "Неизвестно",
+     "server": "sdgame6",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 7001
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1051,
+    "send",
+    null,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):**\n✅ Запущен\n👤 Хост: Неизвестно\n⏱️ 0 мин. назад\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: user100\n⏱️ 20 мин. назад\n\n**Сервер #2 (Франкфурт 2):** 🔴 Недоступен (отключён)\n\n\n*</srv:100000000000000002> для запуска сервера*\n\n*</stop:100000000000000003> для остановки своего сервера*\n*</crew_win:100000000000000004> для того, чтобы дать победу мирным*\n*</traitors_win:100000000000000005> для того, чтобы дать победу предателям*\n\n*</useful_things:100000000000000006> для того, чтобы получить полезные ссылки по SDG*\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ],
+     "view": [
+      "ServerPanelView",
+      null,
+      [
+       [
+        "Button",
+        "game_refresh",
+        null,
+        "🔄 Обновить",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_configure",
+        null,
+        "⚙️ СОЗДАТЬ СЕРВЕР",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_reserve",
+        null,
+        "🔒 Зарезервировать",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_server_info",
+        2,
+        "ℹ️ Информация о сервере",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_islands",
+        2,
+        "🗿 Острова",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_want_host",
+        2,
+        "🎮 Хочу хостить (запрос доступа)",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_console_open",
+        1,
+        "🎮 Открыть консоль",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_console_access",
+        1,
+        "👥 Дать доступ к консоли",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        null,
+        1,
+        "🎞️ Посмотреть реплеи",
+        "ButtonStyle.link",
+        "https://example.org/map/",
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_create_initial_panel[True-True-disabled0]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame6",
+     "started_at": null
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [],
+  "result": null,
+  "ssh": []
+ },
+ "test_gamepanel[1-True]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    },
+    {
+     "reserved_by_id": "7",
+     "reserved_by_name": "res",
+     "reserved_until": "datetime.datetime(2026, 10, 20, 12, 5, 30, 123000)",
+     "server": "sdgame6"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "ctx.send",
+    "❌ Только администраторы могут использовать эту команду!",
+    {}
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_gamepanel[431-False]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    },
+    {
+     "reserved_by_id": "7",
+     "reserved_by_name": "res",
+     "reserved_until": "datetime.datetime(2026, 10, 20, 12, 5, 30, 123000)",
+     "server": "sdgame6"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "ctx.send",
+    "❌ Канал для панели не найден!",
+    {}
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_gamepanel[431-True]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    },
+    {
+     "reserved_by_id": "7",
+     "reserved_by_name": "res",
+     "reserved_until": "datetime.datetime(2026, 10, 20, 12, 5, 30, 123000)",
+     "server": "sdgame6"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 7001
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1051,
+    "send",
+    null,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):** 🔒 Зарезервирован\n👤 res до 12:05 UTC\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: user100\n⏱️ 20 мин. назад\n\n**Сервер #2 (Франкфурт 2):**\n✅ Запущен\n👤 Хост: other\n⏱️ 3 мин. назад\n\n\n*</srv:100000000000000002> для ЗАПУСКА сервера*\n\n*</stop:100000000000000003> для ОСТАНОВКИ своего сервера*\n*</crew_win:100000000000000004> - засчитать ПОБЕДУ мирным*\n*</traitors_win:100000000000000005> - засчитать ПОБЕДУ предателям*\n\n*</useful_things:100000000000000006> - получить доп. информацию по игре*\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ],
+     "view": [
+      "ServerPanelView",
+      null,
+      [
+       [
+        "Button",
+        "game_refresh",
+        null,
+        "🔄 Обновить",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_configure",
+        null,
+        "⚙️ СОЗДАТЬ СЕРВЕР",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_reserve",
+        null,
+        "🔒 Зарезервировать",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_server_info",
+        2,
+        "ℹ️ Информация о сервере",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_islands",
+        2,
+        "🗿 Острова",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_want_host",
+        2,
+        "🎮 Хочу хостить (запрос доступа)",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_console_open",
+        1,
+        "🎮 Открыть консоль",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "game_console_access",
+        1,
+        "👥 Дать доступ к консоли",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        null,
+        1,
+        "🎞️ Посмотреть реплеи",
+        "ButtonStyle.link",
+        "https://example.org/map/",
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ],
+   [
+    "ctx.send",
+    "✅ Панель создана в канале <#1051>!",
+    {}
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_failed_start_check[0]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "unknown",
+     "host_name": "Неизвестно",
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame5",
+     "started_at": null
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "⚠️ Сервер остановлен автоматически",
+      null,
+      15158332,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1 (Франкфурт)",
+        false
+       ],
+       [
+        "Хост",
+        "stuck",
+        false
+       ],
+       [
+        "Причина",
+        "Сервер не запустился: за 5 минут никто не зашёл на сервер",
+        false
+       ]
+      ],
+      null
+     ]
+    }
+   ],
+   [
+    1051,
+    "fetch",
+    42
+   ],
+   [
+    1051,
+    "message.edit",
+    42,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):** 🟢 Свободен\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: Неизвестно\n⏱️ 0 мин. назад\n\n**Сервер #2 (Франкфурт 2):** 🟢 Свободен\n\n\nВедётся подсчёт [статистики](https://example.org/players_graph.html)\n\n</srv:100000000000000002> - ЗАПУСТИТЬ сервер\n</player:100000000000000001> - получить информацию об отдельном игроке\n</leaderboard:100000000000000007> - открыть ранговую таблицу\n\n</stop:100000000000000003> - ОСТАНОВИТЬ сервер\n</crew_win:100000000000000004> - засчитать ПОБЕДУ МИРНЫМ\n</traitors_win:100000000000000005> - засчитать ПОБЕДУ ПРЕДАТЕЛЯМ\n\n</useful_things:100000000000000006> - получить доп. информацию по игре\n</report:100000000000000008> - закинуть репортик\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep -c 'Login request' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log 2>/dev/null || echo 0"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -X quit"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_failed_start_check[1]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "1",
+     "host_name": "stuck",
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 55, 29, 123000)"
+    },
+    {
+     "host_id": "2",
+     "host_name": "young",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 56, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep -c 'Login request' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log 2>/dev/null || echo 0"
+   ]
+  ]
+ },
+ "test_failed_start_check[3]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "1",
+     "host_name": "stuck",
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 55, 29, 123000)"
+    },
+    {
+     "host_id": "2",
+     "host_name": "young",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 56, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep -c 'Login request' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log 2>/dev/null || echo 0"
+   ]
+  ]
+ },
+ "test_failed_start_check[]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "unknown",
+     "host_name": "Неизвестно",
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame5",
+     "started_at": null
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "⚠️ Сервер остановлен автоматически",
+      null,
+      15158332,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1 (Франкфурт)",
+        false
+       ],
+       [
+        "Хост",
+        "stuck",
+        false
+       ],
+       [
+        "Причина",
+        "Сервер не запустился: за 5 минут никто не зашёл на сервер",
+        false
+       ]
+      ],
+      null
+     ]
+    }
+   ],
+   [
+    1051,
+    "fetch",
+    42
+   ],
+   [
+    1051,
+    "message.edit",
+    42,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):** 🟢 Свободен\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: Неизвестно\n⏱️ 0 мин. назад\n\n**Сервер #2 (Франкфурт 2):** 🟢 Свободен\n\n\nВедётся подсчёт [статистики](https://example.org/players_graph.html)\n\n</srv:100000000000000002> - ЗАПУСТИТЬ сервер\n</player:100000000000000001> - получить информацию об отдельном игроке\n</leaderboard:100000000000000007> - открыть ранговую таблицу\n\n</stop:100000000000000003> - ОСТАНОВИТЬ сервер\n</crew_win:100000000000000004> - засчитать ПОБЕДУ МИРНЫМ\n</traitors_win:100000000000000005> - засчитать ПОБЕДУ ПРЕДАТЕЛЯМ\n\n</useful_things:100000000000000006> - получить доп. информацию по игре\n</report:100000000000000008> - закинуть репортик\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep -c 'Login request' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log 2>/dev/null || echo 0"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -X quit"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_failed_start_check[garbage]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "1",
+     "host_name": "stuck",
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 55, 29, 123000)"
+    },
+    {
+     "host_id": "2",
+     "host_name": "young",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 56, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep -c 'Login request' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log 2>/dev/null || echo 0"
+   ]
+  ]
+ },
+ "test_force_win[roles0-run0-1-True-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — 🏳️ Победа мирных**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — 🏳️ Победа мирных",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=1'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles0-run0-1-True-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — ☠️ Победа предателей**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — ☠️ Победа предателей",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=2'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles1-run1-521-True-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — 🏳️ Победа мирных**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — 🏳️ Победа мирных",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=1'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles1-run1-521-True-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — ☠️ Победа предателей**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — ☠️ Победа предателей",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=2'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles2-run2-521-True-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — 🏳️ Победа мирных**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — 🏳️ Победа мирных",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=1'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles2-run2-521-True-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — ☠️ Победа предателей**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — ☠️ Победа предателей",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=2'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles3-run3-521-True-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — 🏳️ Победа мирных**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — 🏳️ Победа мирных",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=1'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles3-run3-521-True-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — ☠️ Победа предателей**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — ☠️ Победа предателей",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=2'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles4-run4-521-False-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "followup.send",
+    "❌ В лобби нет игроков. Завершение матча невозможно.",
+    {
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ]
+  ]
+ },
+ "test_force_win[roles4-run4-521-False-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "followup.send",
+    "❌ В лобби нет игроков. Завершение матча невозможно.",
+    {
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ]
+  ]
+ },
+ "test_force_win[roles5-run5-521-True-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — 🏳️ Победа мирных**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — 🏳️ Победа мирных",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=1'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles5-run5-521-True-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — ☠️ Победа предателей**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — ☠️ Победа предателей",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=2'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles6-run6-521-True-crew_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — 🏳️ Победа мирных**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — 🏳️ Победа мирных",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — 🏳️ Победа мирных?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=1'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_force_win[roles6-run6-521-True-traitors_win_slash]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Завершение матча...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Матч завершён — ☠️ Победа предателей**\n\nСервер 1 (test_game_server_1_host:7777)"
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "🏁 Матч завершён принудительно — ☠️ Победа предателей",
+      null,
+      15105570,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Завершил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Отменено",
+     "view": null
+    }
+   ],
+   [
+    "choice",
+    [
+     [
+      "Сервер 1 (test_game_server_1_host:7777) — user100",
+      "force_win_choice_0"
+     ],
+     [
+      "Сервер 2 (test_game_server_2_host:7777) — Неизвестно",
+      "force_win_choice_1"
+     ]
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Завершить матч — ☠️ Победа предателей?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "ForceWinConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, завершить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'Join succeeded' test_game_server_1_folder/WindowsServer/Game/Saved/Logs/Game.log || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff 'force_match_end.js?winner=2'"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -p 0 -X stuff $'\r'"
+   ]
+  ]
+ },
+ "test_panel_update_task": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "sdgame5",
+     "started_at": null
+    },
+    {
+     "host_id": "unknown",
+     "host_name": "Неизвестно",
+     "server": "sdgame6",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [
+    {
+     "_id": "panel_message",
+     "message_id": 42
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1051,
+    "fetch",
+    42
+   ],
+   [
+    1051,
+    "message.edit",
+    42,
+    {
+     "embed": [
+      "🎮 Статус серверов Social Deduction Game",
+      "**Сервер #3 (Франкфурт 3):**\n✅ Запущен\n👤 Хост: Неизвестно\n⏱️ 0 мин. назад\n\n**Сервер #1 (Франкфурт):**\n✅ Запущен\n👤 Хост: user100\n⏱️ 20 мин. назад\n\n**Сервер #2 (Франкфурт 2):** 🟢 Свободен\n\n\nВедётся подсчёт [статистики](https://example.org/players_graph.html)\n\n</srv:100000000000000002> - ЗАПУСТИТЬ сервер\n</player:100000000000000001> - получить информацию об отдельном игроке\n</leaderboard:100000000000000007> - открыть ранговую таблицу\n\n</stop:100000000000000003> - ОСТАНОВИТЬ сервер\n</crew_win:100000000000000004> - засчитать ПОБЕДУ МИРНЫМ\n</traitors_win:100000000000000005> - засчитать ПОБЕДУ ПРЕДАТЕЛЯМ\n\n</useful_things:100000000000000006> - получить доп. информацию по игре\n</report:100000000000000008> - закинуть репортик\n\n📊 Ранговый режим активен при игре без модов или с любой комбинацией из: тишины на старте, рандомных ролей, квестов, 3/4/5 способностей. Если добавить любой другой мод — ранговый режим выключится. Чтобы выключить его намеренно — выберите мод **Chill**.",
+      3447003,
+      null,
+      [],
+      null
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_reservation_cleanup": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "server": "sdgame4"
+    },
+    {
+     "reserved_by_id": "2",
+     "reserved_by_name": "fresh",
+     "reserved_until": "datetime.datetime(2026, 10, 20, 12, 1, 30, 123000)",
+     "server": "sdgame5"
+    },
+    {
+     "server": "sdgame6"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    1055,
+    "send",
+    null,
+    {
+     "embed": [
+      "⏰ Резервация истекла",
+      null,
+      6323595,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 3 (Франкфурт 3)",
+        false
+       ],
+       [
+        "Был зарезервирован",
+        "?",
+        false
+       ]
+      ],
+      null
+     ]
+    }
+   ],
+   [
+    1055,
+    "send",
+    null,
+    {
+     "embed": [
+      "⏰ Резервация истекла",
+      null,
+      6323595,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1 (Франкфурт)",
+        false
+       ],
+       [
+        "Был зарезервирован",
+        "old",
+        false
+       ]
+      ],
+      null
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles0-1-disabled0-None]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Эта команда доступна только в разрешенных каналах!",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles1-521-disabled1-None]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "⛔ Сервера на данный момент недоступны.\ntest_servers_unavailable_note",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles2-521-disabled2-None]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ У вас нет прав для управления сервером!",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles3-521-disabled3-hosting]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ У вас уже запущен сервер! Остановите его перед запуском нового.",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles4-521-disabled4-hosting]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Настройки сервера",
+      "Сохраняется последний выбор комбинации модов, карт, модификаторов.\nНа сервере ведётся подсчет статистики: https://example.org/players_graph.html\n\n**Ранговый режим:** ✅ Да",
+      3447003,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true,
+     "view": [
+      "ServerSettingsView",
+      2700,
+      [
+       [
+        "RegionSelect",
+        "auto",
+        0,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Франкфурт",
+          "frankfurt",
+          "Два сервера",
+          "None",
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MapSelect",
+        "auto",
+        1,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Гавань",
+          "harbor",
+          "Карта: Harbor",
+          "🏔️",
+          true
+         ],
+         [
+          "Долина",
+          "valley",
+          "Карта: Valley",
+          "🌊",
+          false
+         ],
+         [
+          "Застава",
+          "outpost",
+          "Карта: Outpost",
+          "⛰️",
+          false
+         ],
+         [
+          "Острова",
+          "islands",
+          "Карта: Islands",
+          "🏝️",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ModsSelect",
+        "auto",
+        2,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Рандомные роли",
+          "rand_role",
+          "Случайное распределение ролей",
+          "🎲",
+          true
+         ],
+         [
+          "Пять способностей",
+          "ability_5",
+          "Кастомные способности (5)",
+          "✨",
+          false
+         ],
+         [
+          "Четыре способности",
+          "ability_4",
+          "Кастомные способности (4)",
+          "💫",
+          false
+         ],
+         [
+          "Тишина на старте",
+          "ability_cast_start",
+          "Отключение голоса в начале",
+          "🔇",
+          true
+         ],
+         [
+          "Console",
+          "console",
+          "Включить консоль",
+          "🎮",
+          false
+         ],
+         [
+          "Ability Charge",
+          "ability_charge",
+          "Фикс заряда способностей",
+          "⚡",
+          false
+         ],
+         [
+          "Квесты",
+          "quests",
+          "Мгновенные квесты",
+          "📜",
+          false
+         ],
+         [
+          "Chill",
+          "chill",
+          "Неранговый режим",
+          "😎",
+          false
+         ],
+         [
+          "RelicMod 1.1.4",
+          "relic_mod",
+          "Реликтовый мод (авто для Островов)",
+          "🗿",
+          false
+         ],
+         [
+          "Guides",
+          "guides",
+          "Включить гайды",
+          "📖",
+          false
+         ]
+        ],
+        0,
+        10
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "✅ Запустить сервер",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "⚙️ Модификаторы: ВЫКЛ",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles5-521-disabled5-preset]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [
+    {
+     "custom_modifiers": {
+      "maxplayers": 9
+     },
+     "custom_modifiers_enabled": true,
+     "map": "islands",
+     "mode": "solo",
+     "mods": [
+      "rand_role",
+      "ability_4"
+     ],
+     "region": "frankfurt",
+     "user_id": "100"
+    }
+   ],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Настройки сервера",
+      "Сохраняется последний выбор комбинации модов, карт, модификаторов.\nНа сервере ведётся подсчет статистики: https://example.org/players_graph.html\n\n**Ранговый режим:** ❌ Нет (пользовательские модификаторы, Соло режим)\n**Модификаторы:** ✅ Включены",
+      3447003,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true,
+     "view": [
+      "ServerSettingsView",
+      2700,
+      [
+       [
+        "GameModeSelect",
+        "auto",
+        0,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Обычный",
+          "normal",
+          "8 игроков, 2 предателя",
+          "👥",
+          false
+         ],
+         [
+          "Соло",
+          "solo",
+          "1 игрок, 1 предатель",
+          "🎯",
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "RegionSelect",
+        "auto",
+        1,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Франкфурт",
+          "frankfurt",
+          "Два сервера",
+          "None",
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MapSelect",
+        "auto",
+        2,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Гавань",
+          "harbor",
+          "Карта: Harbor",
+          "🏔️",
+          false
+         ],
+         [
+          "Долина",
+          "valley",
+          "Карта: Valley",
+          "🌊",
+          false
+         ],
+         [
+          "Застава",
+          "outpost",
+          "Карта: Outpost",
+          "⛰️",
+          false
+         ],
+         [
+          "Острова",
+          "islands",
+          "Карта: Islands",
+          "🏝️",
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ModsSelect",
+        "auto",
+        3,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Рандомные роли",
+          "rand_role",
+          "Случайное распределение ролей",
+          "🎲",
+          true
+         ],
+         [
+          "Пять способностей",
+          "ability_5",
+          "Кастомные способности (5)",
+          "✨",
+          false
+         ],
+         [
+          "Четыре способности",
+          "ability_4",
+          "Кастомные способности (4)",
+          "💫",
+          false
+         ],
+         [
+          "Тишина на старте",
+          "ability_cast_start",
+          "Отключение голоса в начале",
+          "🔇",
+          false
+         ],
+         [
+          "Console",
+          "console",
+          "Включить консоль",
+          "🎮",
+          false
+         ],
+         [
+          "Ability Charge",
+          "ability_charge",
+          "Фикс заряда способностей",
+          "⚡",
+          false
+         ],
+         [
+          "Квесты",
+          "quests",
+          "Мгновенные квесты",
+          "📜",
+          false
+         ],
+         [
+          "Chill",
+          "chill",
+          "Неранговый режим",
+          "😎",
+          false
+         ],
+         [
+          "RelicMod 1.1.4",
+          "relic_mod",
+          "Реликтовый мод (авто для Островов)",
+          "🗿",
+          false
+         ],
+         [
+          "Guides",
+          "guides",
+          "Включить гайды",
+          "📖",
+          false
+         ],
+         [
+          "Тренировочный мод",
+          "train_mode",
+          "Режим тренировки",
+          "🎯",
+          false
+         ],
+         [
+          "Ability Upgrade",
+          "ability_upgrade",
+          "Улучшение способностей",
+          "🔥",
+          false
+         ],
+         [
+          "Острова - 10 человек",
+          "islands_10",
+          "10 игроков вместо 8",
+          "🔢",
+          false
+         ],
+         [
+          "Острова - 11 человек",
+          "islands_11",
+          "11 игроков вместо 8",
+          "🔢",
+          false
+         ]
+        ],
+        0,
+        14
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "✅ Запустить сервер",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "⚙️ Модификаторы: ВКЛ",
+        "ButtonStyle.primary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_srv[100-roles6-521-disabled6-None]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Настройки сервера",
+      "Сохраняется последний выбор комбинации модов, карт, модификаторов.\nНа сервере ведётся подсчет статистики: https://example.org/players_graph.html\n\n**Ранговый режим:** ✅ Да",
+      3447003,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true,
+     "view": [
+      "ServerSettingsView",
+      2700,
+      [
+       [
+        "RegionSelect",
+        "auto",
+        0,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Франкфурт",
+          "frankfurt",
+          "Два сервера",
+          "None",
+          true
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "MapSelect",
+        "auto",
+        1,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Гавань",
+          "harbor",
+          "Карта: Harbor",
+          "🏔️",
+          true
+         ],
+         [
+          "Долина",
+          "valley",
+          "Карта: Valley",
+          "🌊",
+          false
+         ],
+         [
+          "Застава",
+          "outpost",
+          "Карта: Outpost",
+          "⛰️",
+          false
+         ],
+         [
+          "Острова",
+          "islands",
+          "Карта: Islands",
+          "🏝️",
+          false
+         ]
+        ],
+        1,
+        1
+       ],
+       [
+        "ModsSelect",
+        "auto",
+        2,
+        null,
+        "None",
+        null,
+        false,
+        null,
+        [
+         [
+          "Рандомные роли",
+          "rand_role",
+          "Случайное распределение ролей",
+          "🎲",
+          true
+         ],
+         [
+          "Пять способностей",
+          "ability_5",
+          "Кастомные способности (5)",
+          "✨",
+          false
+         ],
+         [
+          "Четыре способности",
+          "ability_4",
+          "Кастомные способности (4)",
+          "💫",
+          false
+         ],
+         [
+          "Тишина на старте",
+          "ability_cast_start",
+          "Отключение голоса в начале",
+          "🔇",
+          true
+         ],
+         [
+          "Console",
+          "console",
+          "Включить консоль",
+          "🎮",
+          false
+         ],
+         [
+          "Ability Charge",
+          "ability_charge",
+          "Фикс заряда способностей",
+          "⚡",
+          false
+         ],
+         [
+          "Квесты",
+          "quests",
+          "Мгновенные квесты",
+          "📜",
+          false
+         ],
+         [
+          "Chill",
+          "chill",
+          "Неранговый режим",
+          "😎",
+          false
+         ],
+         [
+          "RelicMod 1.1.4",
+          "relic_mod",
+          "Реликтовый мод (авто для Островов)",
+          "🗿",
+          false
+         ],
+         [
+          "Guides",
+          "guides",
+          "Включить гайды",
+          "📖",
+          false
+         ]
+        ],
+        0,
+        10
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "✅ Запустить сервер",
+        "ButtonStyle.success",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "⚙️ Модификаторы: ВЫКЛ",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        4,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_static_commands": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "🗿 RelicMod 1.1.4 — Установка и настройка",
+      null,
+      1752220,
+      null,
+      [
+       [
+        "📥 Шаг 1 — Скачать файлы",
+        "Скачать файлы для Островов и RelicMod 1.1.4: [Google Drive](test_relicmod_download_url) или через **ModLauncher от Moeyy**",
+        false
+       ],
+       [
+        "📂 Шаг 2 — Установить файлы",
+        "Скинуть содержимое архива в папку с игрой:\n```\nD:\\Games\\Social Deduction Game\\Game\\Content\\Paks\n```",
+        false
+       ],
+       [
+        "⚠️ Шаг 3 — Проверить ошибки",
+        "Если что-то не работает — проверьте, нет ли **старых версий RelicMod** в других папках.",
+        false
+       ],
+       [
+        "✅ Шаг 4 — Проверить версию",
+        "Зайдите в игру и убедитесь, что отображается версия **1.1.4**.",
+        false
+       ],
+       [
+        "👥 Хостинг на 11 человек",
+        "Открыть файл:\n```\nC:\\Users\\ИМЯ_УЧЕТНОЙ_ЗАПИСИ\\AppData\\Local\\Game\\Saved\\Config\\WindowsNoEditor\\Game.ini\n```Добавить в конец:\n```\n[/Script/Engine.GameSession]\nMaxPlayers=64\n```",
+        false
+       ],
+       [
+        "🔧 Не видишь 11 человек в лобби, а только 8?",
+        "Нужно накатить **Patcher-фикс**: [Telegram](test_telegram_contact_url) или [Google Drive](test_patcher_fix_url)\n\n⚠️ Перед заменой файлов — **скопируйте оригиналы в отдельную папку**, чтобы можно было откатиться.",
+        false
+       ]
+      ],
+      null
+     ],
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "🔗 Полезные ссылки по Social Deduction Game",
+      null,
+      5793266,
+      null,
+      [
+       [
+        "Патчер-инджектор от COMMUNITY",
+        "test_community_patcher_url\nНужна для того, чтобы функционировали разные клиентские патчи (реконнектор, фикс UI на 8+ игроков, лобби-патчи)",
+        false
+       ],
+       [
+        "Реконнектор от COMMUNITY",
+        "test_community_reconnector_url\nВ большинстве случаев позволяет заходить в игры с войсом после крашей, пусть и не всегда. Необходима патчер.",
+        false
+       ],
+       [
+        "Крашит игру при входе?",
+        "Вероятно, стоит одна из новых версий оверлея от Serega (он прекратил разработку, плюс Vule закрыл сервера). Можно поставить FreeTPшный или скачать старые версии с канала Неформала.",
+        false
+       ],
+       [
+        "Поддержать сервера",
+        "На данный момент сервера оплачиваются самостоятельно, но если есть желание помочь с содержанием или добавлением новых серверов:\n[DonationAlerts](test_donation_url)",
+        false
+       ],
+       [
+        "Новичок?",
+        "Советуем почитать гайды: [example.org](https://example.org)",
+        false
+       ]
+      ],
+      null
+     ],
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_stop_and_confirm[roles0-run0-1]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Эта команда доступна только в разрешенных каналах!",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_stop_and_confirm[roles1-run1-521]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ У вас нет прав для управления сервером!",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_stop_and_confirm[roles2-run2-521]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Нет доступных серверов для остановки.",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_stop_and_confirm[roles3-run3-521]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "**Остановить сервер?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад",
+    {
+     "ephemeral": true,
+     "view": [
+      "StopConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, остановить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": "StopConfirmView",
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_stop_and_confirm[roles4-run4-521]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "Выберите сервер для остановки:",
+    {
+     "ephemeral": true,
+     "view": [
+      "StopServerChoiceView",
+      60,
+      [
+       [
+        "Button",
+        "stop_choice_0",
+        null,
+        "Сервер 1 (test_game_server_1_host:7777)",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "stop_choice_1",
+        null,
+        "Сервер 2 (test_game_server_2_host:7777)",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": "StopServerChoiceView",
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_stop_and_confirm[roles5-run5-521]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Нет запущенных серверов.",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_stop_and_confirm[roles6-run6-521]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": "100",
+     "host_name": "user100",
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 40, 30, 123000)"
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Нет доступных серверов для остановки.",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ]
+  ]
+ },
+ "test_stop_confirm_flow": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [
+    {
+     "host_id": null,
+     "host_name": null,
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": null
+    },
+    {
+     "host_id": "555",
+     "host_name": "other",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 11, 57, 30, 123000)"
+    }
+   ],
+   "discord_hosts_presets_col": [],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "text",
+    "**Остановить сервер?**\n\n🎮 Сервер 1 (test_game_server_1_host:7777)\n👤 Хост: user100\n⏱️ Запущен: 20 мин. назад"
+   ],
+   [
+    "response.edit",
+    {
+     "content": "❌ Остановка отменена",
+     "view": null
+    }
+   ],
+   [
+    "response.edit",
+    {
+     "content": "⏳ Остановка сервера...",
+     "view": null
+    }
+   ],
+   [
+    "interaction",
+    "message.edit",
+    1,
+    {
+     "content": "✅ **Сервер остановлен**\n\nСервер 1 (test_game_server_1_host:7777) был успешно остановлен."
+    }
+   ],
+   [
+    1054,
+    "send",
+    null,
+    {
+     "embed": [
+      "⏹️ Сервер остановлен",
+      null,
+      15158332,
+      null,
+      [
+       [
+        "Сервер",
+        "Сервер 1",
+        false
+       ],
+       [
+        "Остановил",
+        "<@100> (User 100)",
+        false
+       ]
+      ],
+      "20.10.2026 12:00 UTC"
+     ]
+    }
+   ],
+   [
+    "choice",
+    [
+     "Сервер 1 (test_game_server_1_host:7777)",
+     "Сервер 2 (test_game_server_2_host:7777)"
+    ]
+   ],
+   [
+    "response.edit",
+    {
+     "content": "**Остановить сервер?**\n\n🎮 Сервер 2 (test_game_server_2_host:7777)\n👤 Хост: Неизвестно\n⏱️ Запущен: неизвестно",
+     "view": [
+      "StopConfirmView",
+      60,
+      [
+       [
+        "Button",
+        "auto",
+        null,
+        "✅ Да, остановить",
+        "ButtonStyle.danger",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ],
+       [
+        "Button",
+        "auto",
+        null,
+        "❌ Отмена",
+        "ButtonStyle.secondary",
+        null,
+        false,
+        null,
+        [],
+        null,
+        null
+       ]
+      ]
+     ]
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_1_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_1_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_1_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -S sdgame -X quit"
+   ]
+  ]
+ },
+ "test_usermodifiers[kwargs0]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [
+    {
+     "custom_modifiers": {
+      "fuelburnrate": 1.0,
+      "weatherintensity": 1.0,
+      "dayminutes": 7,
+      "daysbeforestorm": 3,
+      "staminarate": 1.0,
+      "maxplayers": 8,
+      "predatordamage": 1.0,
+      "traitors": 4
+     },
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "100"
+    },
+    {
+     "custom_modifiers": {
+      "fuelburnrate": 1.0,
+      "weatherintensity": 1.0,
+      "dayminutes": 9,
+      "daysbeforestorm": 3,
+      "staminarate": 1.0,
+      "maxplayers": 8,
+      "predatordamage": 1.0,
+      "traitors": 2
+     },
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "200"
+    }
+   ],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Пользовательские модификаторы сохранены",
+      "✅ Значения сохранены. Включите модификаторы кнопкой **⚙️ Модификаторы** в меню запуска сервера.\n\n**Макс. игроков (1–12):** 8\n**Дней до бури (2–7):** 3\n**Минут в дне (5–16):** 7 ✏️\n**Урон волков, медведей (0.25–3):** 1.0\n**Интенсивность погоды (0.25–3):** 1.0\n**Скорость усталости (0.25–3):** 1.0\n**Расход топлива (0.1–2):** 1.0\n**Количество предателей (0–8):** 4 ✏️",
+      3066993,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Пользовательские модификаторы сохранены",
+      "✅ Значения сохранены. Включите модификаторы кнопкой **⚙️ Модификаторы** в меню запуска сервера.\n\n**Макс. игроков (1–12):** 8\n**Дней до бури (2–7):** 3\n**Минут в дне (5–16):** 9\n**Урон волков, медведей (0.25–3):** 1.0\n**Интенсивность погоды (0.25–3):** 1.0\n**Скорость усталости (0.25–3):** 1.0\n**Расход топлива (0.1–2):** 1.0\n**Количество предателей (0–8):** 2",
+      3066993,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_usermodifiers[kwargs1]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [
+    {
+     "custom_modifiers": {
+      "dayminutes": 7,
+      "traitors": 4
+     },
+     "user_id": "100"
+    }
+   ],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Ошибки валидации:\n• maxplayers: должно быть от 1 до 12\n• dayminutes: должно быть от 5 до 16\n• fuelburnrate: должно быть от 0.1 до 2\n• traitors: должно быть от 0 до 8",
+    {
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.send",
+    "❌ Ошибки валидации:\n• maxplayers: должно быть от 1 до 12\n• dayminutes: должно быть от 5 до 16\n• fuelburnrate: должно быть от 0.1 до 2\n• traitors: должно быть от 0 до 8",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_usermodifiers[kwargs2]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [
+    {
+     "custom_modifiers": {
+      "dayminutes": 7,
+      "traitors": 4
+     },
+     "user_id": "100"
+    }
+   ],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    "❌ Ошибки валидации:\n• maxplayers: должно быть от 1 до 12\n• daysbeforestorm: должно быть от 2 до 7\n• predatordamage: должно быть от 0.25 до 3\n• weatherintensity: должно быть от 0.25 до 3\n• staminarate: должно быть от 0.25 до 3",
+    {
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.send",
+    "❌ Ошибки валидации:\n• maxplayers: должно быть от 1 до 12\n• daysbeforestorm: должно быть от 2 до 7\n• predatordamage: должно быть от 0.25 до 3\n• weatherintensity: должно быть от 0.25 до 3\n• staminarate: должно быть от 0.25 до 3",
+    {
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_usermodifiers[kwargs3]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [
+    {
+     "custom_modifiers": {
+      "fuelburnrate": 1.0,
+      "weatherintensity": 1.0,
+      "dayminutes": 7,
+      "daysbeforestorm": 3,
+      "staminarate": 1.0,
+      "maxplayers": 10,
+      "predatordamage": 1.0,
+      "traitors": 3
+     },
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "100"
+    },
+    {
+     "custom_modifiers": {
+      "fuelburnrate": 1.0,
+      "weatherintensity": 1.0,
+      "dayminutes": 9,
+      "daysbeforestorm": 3,
+      "staminarate": 1.0,
+      "maxplayers": 10,
+      "predatordamage": 1.0,
+      "traitors": 3
+     },
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "200"
+    }
+   ],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Пользовательские модификаторы сохранены",
+      "✅ Значения сохранены. Включите модификаторы кнопкой **⚙️ Модификаторы** в меню запуска сервера.\n\n**Макс. игроков (1–12):** 10 ✏️\n**Дней до бури (2–7):** 3\n**Минут в дне (5–16):** 7 ✏️\n**Урон волков, медведей (0.25–3):** 1.0\n**Интенсивность погоды (0.25–3):** 1.0\n**Скорость усталости (0.25–3):** 1.0\n**Расход топлива (0.1–2):** 1.0\n**Количество предателей (0–8):** 3 ✏️",
+      3066993,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Пользовательские модификаторы сохранены",
+      "✅ Значения сохранены. Включите модификаторы кнопкой **⚙️ Модификаторы** в меню запуска сервера.\n\n**Макс. игроков (1–12):** 10 ✏️\n**Дней до бури (2–7):** 3\n**Минут в дне (5–16):** 9\n**Урон волков, медведей (0.25–3):** 1.0\n**Интенсивность погоды (0.25–3):** 1.0\n**Скорость усталости (0.25–3):** 1.0\n**Расход топлива (0.1–2):** 1.0\n**Количество предателей (0–8):** 3 ✏️",
+      3066993,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ },
+ "test_usermodifiers[kwargs4]": {
+  "db": {
+   "console_access_col": [],
+   "game_matches_col": [],
+   "discord_hosts_notify_col": [],
+   "discord_hosts_presets_col": [
+    {
+     "custom_modifiers": {
+      "fuelburnrate": 2,
+      "weatherintensity": 3,
+      "dayminutes": 16,
+      "daysbeforestorm": 2,
+      "staminarate": 1.5,
+      "maxplayers": 12,
+      "predatordamage": 0.25,
+      "traitors": 0
+     },
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "100"
+    },
+    {
+     "custom_modifiers": {
+      "fuelburnrate": 2,
+      "weatherintensity": 3,
+      "dayminutes": 16,
+      "daysbeforestorm": 2,
+      "staminarate": 1.5,
+      "maxplayers": 12,
+      "predatordamage": 0.25,
+      "traitors": 0
+     },
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "200"
+    }
+   ],
+   "discord_panel_col": [],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": [
+    {
+     "is_active": true,
+     "season": 1,
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    }
+   ]
+  },
+  "log": [
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Пользовательские модификаторы сохранены",
+      "✅ Значения сохранены. Включите модификаторы кнопкой **⚙️ Модификаторы** в меню запуска сервера.\n\n**Макс. игроков (1–12):** 12 ✏️\n**Дней до бури (2–7):** 2 ✏️\n**Минут в дне (5–16):** 16 ✏️\n**Урон волков, медведей (0.25–3):** 0.25 ✏️\n**Интенсивность погоды (0.25–3):** 3 ✏️\n**Скорость усталости (0.25–3):** 1.5 ✏️\n**Расход топлива (0.1–2):** 2 ✏️\n**Количество предателей (0–8):** 0 ✏️",
+      3066993,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true
+    }
+   ],
+   [
+    "response.send",
+    null,
+    {
+     "embed": [
+      "⚙️ Пользовательские модификаторы сохранены",
+      "✅ Значения сохранены. Включите модификаторы кнопкой **⚙️ Модификаторы** в меню запуска сервера.\n\n**Макс. игроков (1–12):** 12 ✏️\n**Дней до бури (2–7):** 2 ✏️\n**Минут в дне (5–16):** 16 ✏️\n**Урон волков, медведей (0.25–3):** 0.25 ✏️\n**Интенсивность погоды (0.25–3):** 3 ✏️\n**Скорость усталости (0.25–3):** 1.5 ✏️\n**Расход топлива (0.1–2):** 2 ✏️\n**Количество предателей (0–8):** 0 ✏️",
+      3066993,
+      null,
+      [],
+      null
+     ],
+     "ephemeral": true
+    }
+   ]
+  ],
+  "result": null,
+  "ssh": []
+ }
+}

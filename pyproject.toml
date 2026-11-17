@@ -1,0 +1,30 @@
+# Настройки инструментов разработки. Зависимости бота: requirements.txt, для тестов: requirements-dev.txt
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+# Предупреждение = ошибка теста: устаревший API виден сразу, а не после обновления библиотеки.
+# Исключение только для чужого кода: matplotlib внутри DateLocator ещё использует устаревшее в numpy 2.5.
+filterwarnings = [
+    "error",
+    "ignore:The 'generic' unit for NumPy timedelta is deprecated:DeprecationWarning:matplotlib.*",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+extend-exclude = ["telegram_polls"]  # отдельный Telegram-бот, к Discord-боту не относится
+
+[tool.ruff.format]
+quote-style = "preserve"  # кавычки в проекте смешанные; менять их ради единообразия не стоит истории git
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "C4", "RUF"]
+ignore = [
+    "RUF001", "RUF002", "RUF003",  # кириллица в строках и комментариях: «похожие» символы здесь норма
+    "C408",                        # dict(a=1) вместо {"a": 1}: дело вкуса
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["lobby_bot", "tests"]

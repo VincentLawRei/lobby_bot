@@ -1,0 +1,48 @@
+# Секреты и личные данные: в образ не попадают, подключаются через docker-compose.yml
+.env
+*.env
+credentials.json
+elo_overrides.json
+env_new_keys.txt
+*.pem
+*.key
+*_rsa
+*_ed25519
+
+# Данные и сгенерированные файлы
+logs/
+game_csvs/
+game_csvs_processed/
+media/
+
+# Окружение, IDE, git
+.venv/
+venv/
+.idea/
+.vscode/
+.git/
+.gitignore
+__pycache__/
+*.pyc
+.ruff_cache/
+.github/
+.pre-commit-config.yaml
+
+# Не относится к Discord-боту
+telegram_polls/
+CLAUDE.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Документация и серверные скрипты в образе не нужны
+docs/
+deploy/
+.githooks/
+.gitattributes
+
+# Тесты и инструменты разработки
+tests/
+requirements-dev.txt
+pyproject.toml
+.pytest_cache/

@@ -1,0 +1,1047 @@
+{
+ "test_casual_notification": [
+  [
+   {
+    "color": 15158332,
+    "description": "⏱️ Длительность: 31:03",
+    "fields": [
+     {
+      "inline": false,
+      "name": "👥 Crew — ❌ поражение",
+      "value": "• **Старый ник** (Commander)\n• **name_S2** (Pilot)\n• **Медик Зло** (Medic)\n• **name_S4**\n• **name_TW** (Quartermaster)"
+     },
+     {
+      "inline": false,
+      "name": "👹 Traitors — ✅ победа",
+      "value": "• **name_T1** (Mechanic)\n• **name_T2** (Scout)"
+     },
+     {
+      "inline": false,
+      "name": "📊 Статистика урона",
+      "value": "🗡️ **Урон по предателям (Crew)**\n• **Старый ник** (Commander): 100\n• **name_S2** (Pilot): 100\n• **Медик Зло** (Medic): 100\n• **name_TW** (Quartermaster): 100\n• **name_S4**: 0\n\n💀 **Урон по экипажу (Traitors)**\n• **name_T1** (Mechanic): 300\n• **name_T2** (Scout): 300\n\n🤝 **Урон по тиммейтам**\n• **Старый ник** (Commander): 15\n• **name_T1** (Mechanic): 9"
+     }
+    ],
+    "flags": 0,
+    "footer": {
+     "text": "Матч от 19.10.2026 21:05 • EEEE5555...66"
+    },
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "🎮 Нерейтинговый матч завершён",
+    "type": "rich"
+   },
+   [
+    [
+     "Select",
+     "stats:EEEE5555FFFF6666",
+     null,
+     null,
+     "Выберите игрока...",
+     [
+      [
+       "👥 Старый ник (Commander)",
+       "S1"
+      ],
+      [
+       "👥 name_S2 (Pilot)",
+       "S2"
+      ],
+      [
+       "👥 Медик Зло (Medic)",
+       "S3"
+      ],
+      [
+       "👥 name_TW (Quartermaster)",
+       "TW"
+      ],
+      [
+       "👹 name_T1 (Mechanic)",
+       "T1"
+      ],
+      [
+       "👹 name_T2 (Scout)",
+       "T2"
+      ],
+      [
+       "👥 EXTRA (Priest)",
+       "EXTRA"
+      ],
+      [
+       "👥 name_S4",
+       "S4"
+      ]
+     ],
+     null
+    ],
+    [
+     "Button",
+     "report:EEEE5555FFFF6666",
+     null,
+     "🚩 Репорт",
+     null,
+     [],
+     null
+    ],
+    [
+     "Button",
+     null,
+     null,
+     "🎬 Открыть реплей",
+     null,
+     [],
+     "https://example.org/map/?m=EEEE5555FFFF6666"
+    ]
+   ]
+  ]
+ ],
+ "test_casual_one_team_and_long_names": {
+  "details": {
+   "S1": [
+    {
+     "content": "👥 **Старый ник** — Crewmate · Commander\n\n**⚔️ Нанесено предателям: 180**\n`180` 👹 name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx — Сабля: 120 · Пистолет: 60\n\n**🤝 По тиммейтам: 15**\n`15` 👥 name_S2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx — Камень: 15\n\n**🪃 Себе: 30** — Заряд: 30\n\n**📥 ...",
+     "ephemeral": true
+    }
+   ],
+   "T1": [
+    {
+     "content": "👹 **name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** — Traitor · Mechanic\n\n**⚔️ Нанесено экипажу: 280**\n`200` 👥 Старый ник — Костяной кинжал: 200\n`80` 👥 Медик Зло — Тесак: 80\n\n**🤝 По тиммейтам: 9**\n`9` 👹 name_T2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx — Бочка: 9\n\n**📥 Получ...",
+     "ephemeral": true
+    }
+   ]
+  },
+  "sent": [
+   [
+    {
+     "color": 15158332,
+     "description": "⏱️ Длительность: 31:03",
+     "fields": [
+      {
+       "inline": false,
+       "name": "👥 Crew — ❌ поражение",
+       "value": "—"
+      },
+      {
+       "inline": false,
+       "name": "👹 Traitors — ✅ победа",
+       "value": "• **name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** (Mechanic)\n• **name_T2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** (Scout)"
+      },
+      {
+       "inline": false,
+       "name": "📊 Статистика урона",
+       "value": "🗡️ **Урон по предателям (Crew)**\n\n💀 **Урон по экипажу (Traitors)**\n• **name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** (Mechanic): 300\n• **name_T2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** (Scout): 300\n\n🤝 **Урон по тиммейтам**\n• **name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** (Mechanic): 9"
+      }
+     ],
+     "flags": 0,
+     "footer": {
+      "text": "Матч от 19.10.2026 21:05 • EEEE5555...66"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "🎮 Нерейтинговый матч завершён",
+     "type": "rich"
+    },
+    [
+     [
+      "Select",
+      "stats:EEEE5555FFFF6666",
+      null,
+      null,
+      "Выберите игрока...",
+      [
+       [
+        "👥 S1 (Commander)",
+        "S1"
+       ],
+       [
+        "👥 S2 (Pilot)",
+        "S2"
+       ],
+       [
+        "👥 S3 (Medic)",
+        "S3"
+       ],
+       [
+        "👥 TW (Quartermaster)",
+        "TW"
+       ],
+       [
+        "👹 name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "T1"
+       ],
+       [
+        "👹 name_T2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "T2"
+       ],
+       [
+        "👥 EXTRA (Priest)",
+        "EXTRA"
+       ]
+      ],
+      null
+     ],
+     [
+      "Button",
+      "report:EEEE5555FFFF6666",
+      null,
+      "🚩 Репорт",
+      null,
+      [],
+      null
+     ],
+     [
+      "Button",
+      null,
+      null,
+      "🎬 Открыть реплей",
+      null,
+      [],
+      "https://example.org/map/?m=EEEE5555FFFF6666"
+     ]
+    ]
+   ],
+   [
+    {
+     "color": 15158332,
+     "description": "⏱️ Длительность: 31:03",
+     "fields": [
+      {
+       "inline": false,
+       "name": "👥 Crew — ❌ поражение",
+       "value": "• **name_S1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx**: 1600 → 1588 (-12)\n• **name_S2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx**: 1500 → 1480 (-20) ⚠️ штраф +50%\n• **Медик Зло**: 1450 → 1442 (-8)\n• **name_S4_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx**: 1700 → 1670 (-30)"
+      },
+      {
+       "inline": false,
+       "name": "👹 Traitors — ✅ победа",
+       "value": "• **name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx**: 1550 → 1590 (+40) ⚠️ штраф -50%\n• **name_T2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx**: 1520 → 1553 (+33)"
+      },
+      {
+       "inline": false,
+       "name": "📊 Статистика урона",
+       "value": "🗡️ **Урон по предателям (Crew)**\n• **name_S1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx** (Commander): 100\n• **name_S2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..."
+      }
+     ],
+     "flags": 0,
+     "footer": {
+      "text": "Матч от 19.10.2026 21:05 • AAAA1111...44"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "⚔️ Ranked матч завершён",
+     "type": "rich"
+    },
+    [
+     [
+      "Select",
+      "stats:AAAA1111BBBB2222CCCC3333DDDD4444",
+      null,
+      null,
+      "Выберите игрока...",
+      [
+       [
+        "👥 name_S1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "S1"
+       ],
+       [
+        "👥 name_S2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "S2"
+       ],
+       [
+        "👥 Медик Зло (Medic)",
+        "S3"
+       ],
+       [
+        "👥 name_TW_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "TW"
+       ],
+       [
+        "👹 name_T1_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "T1"
+       ],
+       [
+        "👹 name_T2_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "T2"
+       ],
+       [
+        "👥 EXTRA (Priest)",
+        "EXTRA"
+       ],
+       [
+        "👥 name_S4_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "S4"
+       ]
+      ],
+      null
+     ],
+     [
+      "Button",
+      "report:AAAA1111BBBB2222CCCC3333DDDD4444",
+      null,
+      "🚩 Репорт",
+      null,
+      [],
+      null
+     ],
+     [
+      "Button",
+      null,
+      null,
+      "🎬 Открыть реплей",
+      null,
+      [],
+      "https://example.org/map/?m=AAAA1111BBBB2222CCCC3333DDDD4444"
+     ]
+    ]
+   ]
+  ]
+ },
+ "test_damage_texts": {
+  "details": {
+   "EXTRA": "👥 **EXTRA** — Crewmate · Priest\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 0**\n└ Нет данных",
+   "S1": "👥 **nS1** — Crewmate · Commander\n\n**⚔️ Нанесено предателям: 180**\n`180` 👹 nT1 — Сабля: 120 · Пистолет: 60\n\n**🤝 По тиммейтам: 15**\n`15` 👥 nS2 — Камень: 15\n\n**🪃 Себе: 30** — Заряд: 30\n\n**📥 Получено: 230**\n`200` 👹 nT1 — Костяной кинжал: 200\n`30` 👥 nS1 — Заряд: 30",
+   "S2": "👥 **nS2** — Crewmate · Pilot\n\n**⚔️ Нанесено предателям: 50**\n`45` 👹 nT2 — Лук: 45\n`5` 👹 nT1 — Кулак: 5\n\n**📥 Получено: 27**\n`15` 👥 nS1 — Камень: 15\n`12` ❓ Неизвестно — Падение: 12",
+   "S3": "👥 **nS3** — Crewmate · Medic\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 120**\n`80` 👹 nT1 — Тесак: 80\n`40` 🌿 Природа — 🐺 Волк: 22 · 🐻 Медведь: 18",
+   "S4": "👥 **nS4** — Crewmate\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 35**\n`35` 👹 nT2 — Медвежий капкан: 35",
+   "T1": "👹 **nT1** — Traitor · Mechanic\n\n**⚔️ Нанесено экипажу: 280**\n`200` 👥 nS1 — Костяной кинжал: 200\n`80` 👥 nS3 — Тесак: 80\n\n**🤝 По тиммейтам: 9**\n`9` 👹 nT2 — Бочка: 9\n\n**📥 Получено: 185**\n`180` 👥 nS1 — Сабля: 120 · Пистолет: 60\n`5` 👥 nS2 — Кулак: 5",
+   "T2": "👹 **nT2** — Traitor · Scout\n\n**⚔️ Нанесено экипажу: 0**\n└ Нет данных\n\n**📥 Получено: 61**\n`45` 👥 nS2 — Лук: 45\n`9` 👹 nT1 — Бочка: 9\n`7` 🌿 Природа — 👹 Монстр: 7",
+   "TW": "👥 **nTW** — Crewmate · Quartermaster\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 0**\n└ Нет данных"
+  },
+  "stats": "🗡️ **Урон по предателям (Crew)**\n• **nS1** (Commander): 100\n• **nS2** (Pilot): 100\n• **nS3** (Medic): 100\n• **nTW** (Quartermaster): 100\n• **nS4**: 0\n\n💀 **Урон по экипажу (Traitors)**\n• **nT1** (Mechanic): 300\n• **nT2** (Scout): 300\n\n🤝 **Урон по тиммейтам**\n• **nS1** (Commander): 15\n• **nT1** (Mechanic): 9"
+ },
+ "test_player_detail[EXTRA]": [
+  {
+   "content": "👥 **только в уроне** — Crewmate · Priest\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 0**\n└ Нет данных",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[S1]": [
+  {
+   "content": "👥 **Старый ник** — Crewmate · Commander\n\n**⚔️ Нанесено предателям: 180**\n`180` 👹 name_T1 — Сабля: 120 · Пистолет: 60\n\n**🤝 По тиммейтам: 15**\n`15` 👥 name_S2 — Камень: 15\n\n**🪃 Себе: 30** — Заряд: 30\n\n**📥 Получено: 230**\n`200` 👹 name_T1 — Костяной кинжал: 200\n`30` 👥 Старый ник — Заряд: 30",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[S2]": [
+  {
+   "content": "👥 **name_S2** — Crewmate · Pilot\n\n**⚔️ Нанесено предателям: 50**\n`45` 👹 name_T2 — Лук: 45\n`5` 👹 name_T1 — Кулак: 5\n\n**📥 Получено: 27**\n`15` 👥 Старый ник — Камень: 15\n`12` ❓ Неизвестно — Падение: 12",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[S3]": [
+  {
+   "content": "👥 **Медик Зло** — Crewmate · Medic\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 120**\n`80` 👹 name_T1 — Тесак: 80\n`40` 🌿 Природа — 🐺 Волк: 22 · 🐻 Медведь: 18",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[S4]": [
+  {
+   "content": "👥 **name_S4** — Crewmate\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 35**\n`35` 👹 name_T2 — Медвежий капкан: 35",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[T1]": [
+  {
+   "content": "👹 **name_T1** — Traitor · Mechanic\n\n**⚔️ Нанесено экипажу: 280**\n`200` 👥 Старый ник — Костяной кинжал: 200\n`80` 👥 Медик Зло — Тесак: 80\n\n**🤝 По тиммейтам: 9**\n`9` 👹 name_T2 — Бочка: 9\n\n**📥 Получено: 185**\n`180` 👥 Старый ник — Сабля: 120 · Пистолет: 60\n`5` 👥 name_S2 — Кулак: 5",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[T2]": [
+  {
+   "content": "👹 **name_T2** — Traitor · Scout\n\n**⚔️ Нанесено экипажу: 0**\n└ Нет данных\n\n**📥 Получено: 61**\n`45` 👥 name_S2 — Лук: 45\n`9` 👹 name_T1 — Бочка: 9\n`7` 🌿 Природа — 👹 Монстр: 7",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[TW]": [
+  {
+   "content": "👥 **name_TW** — Crewmate · Quartermaster\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 0**\n└ Нет данных",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[missing]": [
+  {
+   "content": "👥 **missing** — Crewmate\n\n**⚔️ Нанесено предателям: 0**\n└ Нет данных\n\n**📥 Получено: 0**\n└ Нет данных",
+   "ephemeral": true
+  }
+ ],
+ "test_player_detail[none]": [
+  {
+   "content": "❌ Нет данных.",
+   "ephemeral": true
+  }
+ ],
+ "test_ranked_notification": {
+  "penalty": [
+   [
+    {
+     "color": 15105570,
+     "description": "• **name_S2**: 1500 → 1480 (-20) | +50% к потерям | причина: токсичность\n• **name_T1**: 1550 → 1590 (+40) | -50% к получению | причина: —",
+     "flags": 0,
+     "footer": {
+      "text": "Матч AAAA1111...44"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "⚠️ Штрафные игроки в матче",
+     "type": "rich"
+    },
+    null
+   ],
+   [
+    {
+     "color": 5793266,
+     "description": "• **name_TW** играл на твинке основного **MAIN**: без изменений (основной тоже был в матче)",
+     "flags": 0,
+     "footer": {
+      "text": "Матч AAAA1111...44"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "🔁 Обнаружена игра на твинке",
+     "type": "rich"
+    },
+    null
+   ]
+  ],
+  "results": [
+   [
+    {
+     "color": 15158332,
+     "description": "⏱️ Длительность: 31:03",
+     "fields": [
+      {
+       "inline": false,
+       "name": "👥 Crew — ❌ поражение",
+       "value": "• **name_S1**: 1600 → 1588 (-12)\n• **name_S2**: 1500 → 1480 (-20) ⚠️ штраф +50%\n• **Медик Зло**: 1450 → 1442 (-8)\n• **name_S4**: 1700 → 1670 (-30)"
+      },
+      {
+       "inline": false,
+       "name": "👹 Traitors — ✅ победа",
+       "value": "• **name_T1**: 1550 → 1590 (+40) ⚠️ штраф -50%\n• **name_T2**: 1520 → 1553 (+33)"
+      },
+      {
+       "inline": false,
+       "name": "📊 Статистика урона",
+       "value": "🗡️ **Урон по предателям (Crew)**\n• **name_S1** (Commander): 100\n• **name_S2** (Pilot): 100\n• **Медик Зло** (Medic): 100\n• **name_S4**: 0\n\n💀 **Урон по экипажу (Traitors)**\n• **name_T1** (Mechanic): 300\n• **name_T2** (Scout): 300\n\n🤝 **Урон по тиммейтам**\n• **name_S1** (Commander): 15\n• **name_T1** (Mechanic): 9"
+      }
+     ],
+     "flags": 0,
+     "footer": {
+      "text": "Матч от 19.10.2026 21:05 • AAAA1111...44"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "⚔️ Ranked матч завершён",
+     "type": "rich"
+    },
+    [
+     [
+      "Select",
+      "stats:AAAA1111BBBB2222CCCC3333DDDD4444",
+      null,
+      null,
+      "Выберите игрока...",
+      [
+       [
+        "👥 name_S1 (Commander)",
+        "S1"
+       ],
+       [
+        "👥 name_S2 (Pilot)",
+        "S2"
+       ],
+       [
+        "👥 Медик Зло (Medic)",
+        "S3"
+       ],
+       [
+        "👥 name_TW (Quartermaster)",
+        "TW"
+       ],
+       [
+        "👹 name_T1 (Mechanic)",
+        "T1"
+       ],
+       [
+        "👹 name_T2 (Scout)",
+        "T2"
+       ],
+       [
+        "👥 EXTRA (Priest)",
+        "EXTRA"
+       ],
+       [
+        "👥 name_S4",
+        "S4"
+       ]
+      ],
+      null
+     ],
+     [
+      "Button",
+      "report:AAAA1111BBBB2222CCCC3333DDDD4444",
+      null,
+      "🚩 Репорт",
+      null,
+      [],
+      null
+     ],
+     [
+      "Button",
+      null,
+      null,
+      "🎬 Открыть реплей",
+      null,
+      [],
+      "https://example.org/map/?m=AAAA1111BBBB2222CCCC3333DDDD4444"
+     ]
+    ]
+   ]
+  ]
+ },
+ "test_ranked_one_team": [
+  [
+   {
+    "color": 15158332,
+    "description": "⏱️ Длительность: 31:03",
+    "fields": [
+     {
+      "inline": false,
+      "name": "👥 Crew — ❌ поражение",
+      "value": "—"
+     },
+     {
+      "inline": false,
+      "name": "👹 Traitors — ✅ победа",
+      "value": "• **name_T1**: 1550 → 1590 (+40) ⚠️ штраф -50%\n• **name_T2**: 1520 → 1553 (+33)"
+     },
+     {
+      "inline": false,
+      "name": "📊 Статистика урона",
+      "value": "🗡️ **Урон по предателям (Crew)**\n\n💀 **Урон по экипажу (Traitors)**\n• **name_T1** (Mechanic): 300\n• **name_T2** (Scout): 300\n\n🤝 **Урон по тиммейтам**\n• **name_T1** (Mechanic): 9"
+     }
+    ],
+    "flags": 0,
+    "footer": {
+     "text": "Матч от 19.10.2026 21:05 • AAAA1111...44"
+    },
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "⚔️ Ranked матч завершён",
+    "type": "rich"
+   },
+   [
+    [
+     "Select",
+     "stats:AAAA1111BBBB2222CCCC3333DDDD4444",
+     null,
+     null,
+     "Выберите игрока...",
+     [
+      [
+       "👥 name_S1 (Commander)",
+       "S1"
+      ],
+      [
+       "👥 name_S2 (Pilot)",
+       "S2"
+      ],
+      [
+       "👥 Медик Зло (Medic)",
+       "S3"
+      ],
+      [
+       "👥 name_TW (Quartermaster)",
+       "TW"
+      ],
+      [
+       "👹 name_T1 (Mechanic)",
+       "T1"
+      ],
+      [
+       "👹 name_T2 (Scout)",
+       "T2"
+      ],
+      [
+       "👥 EXTRA (Priest)",
+       "EXTRA"
+      ],
+      [
+       "👥 name_S4",
+       "S4"
+      ]
+     ],
+     null
+    ],
+    [
+     "Button",
+     "report:AAAA1111BBBB2222CCCC3333DDDD4444",
+     null,
+     "🚩 Репорт",
+     null,
+     [],
+     null
+    ],
+    [
+     "Button",
+     null,
+     null,
+     "🎬 Открыть реплей",
+     null,
+     [],
+     "https://example.org/map/?m=AAAA1111BBBB2222CCCC3333DDDD4444"
+    ]
+   ]
+  ]
+ ],
+ "test_ranked_without_damage_and_penalties": {
+  "penalty": [
+   [
+    {
+     "color": 5793266,
+     "description": "• **name_TW** играл на твинке основного **MAIN**: без изменений (основной тоже был в матче)",
+     "flags": 0,
+     "footer": {
+      "text": "Матч AAAA1111...44"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "🔁 Обнаружена игра на твинке",
+     "type": "rich"
+    },
+    null
+   ]
+  ],
+  "results": [
+   [
+    {
+     "color": 15158332,
+     "description": "⏱️ Длительность: 31:03",
+     "fields": [
+      {
+       "inline": false,
+       "name": "👥 Crew — ❌ поражение",
+       "value": "• **name_S1**: 1600 → 1588 (-12)\n• **name_S2**: 1500 → 1480 (-20)\n• **Медик Зло**: 1450 → 1442 (-8)\n• **name_S4**: 1700 → 1670 (-30)"
+      },
+      {
+       "inline": false,
+       "name": "👹 Traitors — ✅ победа",
+       "value": "• **name_T1**: 1550 → 1590 (+40)\n• **name_T2**: 1520 → 1553 (+33)"
+      }
+     ],
+     "flags": 0,
+     "footer": {
+      "text": "Матч от 19.10.2026 21:05 • AAAA1111...44"
+     },
+     "timestamp": "2026-10-20T12:00:00+00:00",
+     "title": "⚔️ Ranked матч завершён",
+     "type": "rich"
+    },
+    [
+     [
+      "Select",
+      "stats:AAAA1111BBBB2222CCCC3333DDDD4444",
+      null,
+      null,
+      "Выберите игрока...",
+      [
+       [
+        "👥 name_S1",
+        "S1"
+       ],
+       [
+        "👥 name_S2",
+        "S2"
+       ],
+       [
+        "👥 Медик Зло",
+        "S3"
+       ],
+       [
+        "👥 name_S4",
+        "S4"
+       ],
+       [
+        "👥 name_TW",
+        "TW"
+       ],
+       [
+        "👥 name_T1",
+        "T1"
+       ],
+       [
+        "👥 name_T2",
+        "T2"
+       ]
+      ],
+      null
+     ],
+     [
+      "Button",
+      "report:AAAA1111BBBB2222CCCC3333DDDD4444",
+      null,
+      "🚩 Репорт",
+      null,
+      [],
+      null
+     ],
+     [
+      "Button",
+      null,
+      null,
+      "🎬 Открыть реплей",
+      null,
+      [],
+      "https://example.org/map/?m=AAAA1111BBBB2222CCCC3333DDDD4444"
+     ]
+    ]
+   ]
+  ]
+ },
+ "test_ranked_without_penalty_channel": [
+  [
+   {
+    "color": 15158332,
+    "description": "⏱️ Длительность: 31:03",
+    "fields": [
+     {
+      "inline": false,
+      "name": "👥 Crew — ❌ поражение",
+      "value": "• **name_S1**: 1600 → 1588 (-12)\n• **name_S2**: 1500 → 1480 (-20) ⚠️ штраф +50%\n• **Медик Зло**: 1450 → 1442 (-8)\n• **name_S4**: 1700 → 1670 (-30)"
+     },
+     {
+      "inline": false,
+      "name": "👹 Traitors — ✅ победа",
+      "value": "• **name_T1**: 1550 → 1590 (+40) ⚠️ штраф -50%\n• **name_T2**: 1520 → 1553 (+33)"
+     },
+     {
+      "inline": false,
+      "name": "📊 Статистика урона",
+      "value": "🗡️ **Урон по предателям (Crew)**\n• **name_S1** (Commander): 100\n• **name_S2** (Pilot): 100\n• **Медик Зло** (Medic): 100\n• **name_S4**: 0\n\n💀 **Урон по экипажу (Traitors)**\n• **name_T1** (Mechanic): 300\n• **name_T2** (Scout): 300\n\n🤝 **Урон по тиммейтам**\n• **name_S1** (Commander): 15\n• **name_T1** (Mechanic): 9"
+     }
+    ],
+    "flags": 0,
+    "footer": {
+     "text": "Матч от 19.10.2026 21:05 • AAAA1111...44"
+    },
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "⚔️ Ranked матч завершён",
+    "type": "rich"
+   },
+   [
+    [
+     "Select",
+     "stats:AAAA1111BBBB2222CCCC3333DDDD4444",
+     null,
+     null,
+     "Выберите игрока...",
+     [
+      [
+       "👥 name_S1 (Commander)",
+       "S1"
+      ],
+      [
+       "👥 name_S2 (Pilot)",
+       "S2"
+      ],
+      [
+       "👥 Медик Зло (Medic)",
+       "S3"
+      ],
+      [
+       "👥 name_TW (Quartermaster)",
+       "TW"
+      ],
+      [
+       "👹 name_T1 (Mechanic)",
+       "T1"
+      ],
+      [
+       "👹 name_T2 (Scout)",
+       "T2"
+      ],
+      [
+       "👥 EXTRA (Priest)",
+       "EXTRA"
+      ],
+      [
+       "👥 name_S4",
+       "S4"
+      ]
+     ],
+     null
+    ],
+    [
+     "Button",
+     "report:AAAA1111BBBB2222CCCC3333DDDD4444",
+     null,
+     "🚩 Репорт",
+     null,
+     [],
+     null
+    ],
+    [
+     "Button",
+     null,
+     null,
+     "🎬 Открыть реплей",
+     null,
+     [],
+     "https://example.org/map/?m=AAAA1111BBBB2222CCCC3333DDDD4444"
+    ]
+   ]
+  ]
+ ],
+ "test_report_flow": {
+  "content": "## 🚩 Репорт на игрока\n\n**Игрок:** — не выбран\n\n**Причины:**\n— не выбраны\n\n**Анонимно:** Нет",
+  "final_view": [
+   [
+    "ReportPlayerSelect",
+    "auto",
+    null,
+    null,
+    "Выберите игрока...",
+    [
+     [
+      "Старый ник",
+      "S1"
+     ],
+     [
+      "name_S2",
+      "S2"
+     ],
+     [
+      "Медик Зло",
+      "S3"
+     ],
+     [
+      "name_S4",
+      "S4"
+     ],
+     [
+      "name_TW",
+      "TW"
+     ],
+     [
+      "name_T1",
+      "T1"
+     ],
+     [
+      "name_T2",
+      "T2"
+     ],
+     [
+      "bot",
+      "HOMELANDER"
+     ],
+     [
+      "только в уроне",
+      "EXTRA"
+     ]
+    ],
+    null
+   ],
+   [
+    "ReportReasonSelectMulti",
+    "auto",
+    null,
+    null,
+    "Выберите причину(ы)...",
+    [
+     [
+      "Читы",
+      "Читы"
+     ],
+     [
+      "Консоль",
+      "Консоль"
+     ],
+     [
+      "Негативное поведение",
+      "Негативное поведение"
+     ],
+     [
+      "Отсутствие тумана",
+      "Отсутствие тумана"
+     ],
+     [
+      "По рофлу",
+      "По рофлу"
+     ],
+     [
+      "Троллинг в игре",
+      "Троллинг в игре"
+     ]
+    ],
+    null
+   ],
+   [
+    "ReportAnonymousToggle",
+    "auto",
+    null,
+    "Анонимно: Да",
+    null,
+    [],
+    null
+   ],
+   [
+    "ReportSubmitButton",
+    "auto",
+    3,
+    "✅ Отправить репорт",
+    null,
+    [],
+    null
+   ]
+  ],
+  "initial_view": [
+   [
+    "ReportPlayerSelect",
+    "auto",
+    null,
+    null,
+    "Выберите игрока...",
+    [
+     [
+      "Старый ник",
+      "S1"
+     ],
+     [
+      "name_S2",
+      "S2"
+     ],
+     [
+      "Медик Зло",
+      "S3"
+     ],
+     [
+      "name_S4",
+      "S4"
+     ],
+     [
+      "name_TW",
+      "TW"
+     ],
+     [
+      "name_T1",
+      "T1"
+     ],
+     [
+      "name_T2",
+      "T2"
+     ],
+     [
+      "bot",
+      "HOMELANDER"
+     ],
+     [
+      "только в уроне",
+      "EXTRA"
+     ]
+    ],
+    null
+   ],
+   [
+    "ReportReasonSelectMulti",
+    "auto",
+    null,
+    null,
+    "Выберите причину(ы)...",
+    [
+     [
+      "Читы",
+      "Читы"
+     ],
+     [
+      "Консоль",
+      "Консоль"
+     ],
+     [
+      "Негативное поведение",
+      "Негативное поведение"
+     ],
+     [
+      "Отсутствие тумана",
+      "Отсутствие тумана"
+     ],
+     [
+      "По рофлу",
+      "По рофлу"
+     ],
+     [
+      "Троллинг в игре",
+      "Троллинг в игре"
+     ]
+    ],
+    null
+   ],
+   [
+    "ReportAnonymousToggle",
+    "auto",
+    null,
+    "Анонимно: Нет",
+    null,
+    [],
+    null
+   ],
+   [
+    "ReportSubmitButton",
+    "auto",
+    3,
+    "✅ Отправить репорт",
+    null,
+    [],
+    null
+   ]
+  ],
+  "log": [
+   {
+    "color": 15158332,
+    "fields": [
+     {
+      "inline": true,
+      "name": "На игрока",
+      "value": "**name_T1**"
+     },
+     {
+      "inline": true,
+      "name": "От",
+      "value": "Аноним"
+     },
+     {
+      "inline": false,
+      "name": "Причины",
+      "value": "• Читы\n• Троллинг в игре"
+     }
+    ],
+    "flags": 0,
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "🚩 Новый репорт",
+    "type": "rich"
+   }
+  ],
+  "report": {
+   "anonymous": true,
+   "created_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+   "match_id": "AAAA1111BBBB2222CCCC3333DDDD4444",
+   "reasons": [
+    "Читы",
+    "Троллинг в игре"
+   ],
+   "reporter_id": "42",
+   "reporter_name": "Репортер",
+   "status": "open",
+   "target_name": "name_T1",
+   "target_steam_id": "T1"
+  },
+  "steps": [
+   [
+    {
+     "content": "❌ Выберите игрока.",
+     "ephemeral": true
+    }
+   ],
+   "## 🚩 Репорт на игрока\n\n**Игрок:** name_T1\n\n**Причины:**\n— не выбраны\n\n**Анонимно:** Нет",
+   "## 🚩 Репорт на игрока\n\n**Игрок:** name_T1\n\n**Причины:**\n• Читы\n• Троллинг в игре\n\n**Анонимно:** Нет",
+   [
+    "Анонимно: Да",
+    "## 🚩 Репорт на игрока\n\n**Игрок:** name_T1\n\n**Причины:**\n• Читы\n• Троллинг в игре\n\n**Анонимно:** Да"
+   ],
+   [
+    {
+     "content": "✅ Репорт отправлен. Спасибо!",
+     "view": null
+    }
+   ]
+  ]
+ }
+}

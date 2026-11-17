@@ -1,0 +1,40 @@
+# Discord-бот в Docker. MongoDB остаётся там, где работает сейчас.
+#
+# Запуск:      docker compose up -d --build
+# Логи:        docker compose logs -f   (или файл ./logs/bot.log)
+# Остановка:   docker compose down
+#
+# Пути к SSH-ключам и папкам CSV берутся из .env (те же значения, что при запуске без Docker):
+# слева от ":" путь на сервере, справа путь внутри контейнера.
+
+services:
+  bot:
+    build: .
+    image: lobby-discord-bot:latest
+    container_name: lobby-discord-bot
+    restart: unless-stopped
+
+    # Контейнер использует сеть сервера: MONGO_URL с localhost работает без изменений
+    network_mode: host
+
+    env_file: .env
+    environment:
+      # Пути внутри контейнера (перекрывают значения из .env только для контейнера)
+      GAME_SSH_KEY_PATH: /run/keys/game_servers_key
+      WEB_SSH_KEY_PATH: /run/keys/web_server_key
+      STATS_CSV_FOLDER: /data/game_csvs
+      STATS_CSV_PROCESSED_FOLDER: /data/game_csvs_processed
+
+    volumes:
+      - ${GAME_SSH_KEY_PATH:?GAME_SSH_KEY_PATH не задан в .env}:/run/keys/game_servers_key:ro
+      - ${WEB_SSH_KEY_PATH:?WEB_SSH_KEY_PATH не задан в .env}:/run/keys/web_server_key:ro
+      - ${STATS_CSV_FOLDER:?STATS_CSV_FOLDER не задан в .env}:/data/game_csvs
+      - ${STATS_CSV_PROCESSED_FOLDER:?STATS_CSV_PROCESSED_FOLDER не задан в .env}:/data/game_csvs_processed
+      - ./logs:/app/logs
+
+    # Ограничение логов Docker (основной лог бота в ./logs/bot.log с собственной ротацией)
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

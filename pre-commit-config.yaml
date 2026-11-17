@@ -1,0 +1,9 @@
+# Проверки перед коммитом: один раз `pip install pre-commit` и `pre-commit install`.
+# Версия ruff та же, что в requirements-dev.txt.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format

@@ -1,0 +1,14 @@
+discord.py==2.6.4
+aiohttp==3.12.14
+pymongo==4.13.2
+python-dotenv==1.1.1
+pydantic==2.12.5
+pydantic-settings==2.12.0
+pytz==2025.2
+requests==2.32.4
+paramiko==4.0.0
+matplotlib==3.10.8
+networkx==3.6.1
+pyvis==0.3.2
+python-louvain==0.16
+rapidfuzz==3.14.3

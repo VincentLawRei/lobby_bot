@@ -1,0 +1,3108 @@
+{
+ "test_build_game_command_matrix": {
+  "cases": 2304,
+  "first": [
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7777 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7779 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7777 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7779 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=10?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=3?port=7777 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=10?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=3?port=7779 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=12?daysbeforestorm=7?dayminutes=16?predatordamage=0.25?weatherintensity=3?staminarate=0.5?fuelburnrate=2?traitors=0?port=7777 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_3_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_3_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_3_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_3_folder/scripts/announcement_win64_template.js > test_game_server_3_folder/scripts/announcement_active.js && cd test_game_server_3_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=12?daysbeforestorm=7?dayminutes=16?predatordamage=0.25?weatherintensity=3?staminarate=0.5?fuelburnrate=2?traitors=0?port=7779 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_1_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_1_folder/scripts/announcement_win64_template.js > test_game_server_1_folder/scripts/announcement_active.js && cd test_game_server_1_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7777 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_1_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_1_folder/scripts/announcement_win64_template.js > test_game_server_1_folder/scripts/announcement_active.js && cd test_game_server_1_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7779 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_1_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_1_folder/scripts/announcement_win64_template.js > test_game_server_1_folder/scripts/announcement_active.js && cd test_game_server_1_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7777 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js",
+   "mkdir -p \"test_game_server_1_folder/WindowsServer/Game/Content/Paks\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches\" && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.pak\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.pak\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Islands_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Islands_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/Mod_DropTable_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/Mod_DropTable_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Content/Paks/RelicMod_Server_p.sig\" \"test_game_server_1_folder/WindowsServer/Game/Content/RelicMod_Server_p.sig\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/Roles.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/PatchesOFF/Roles.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_New_Role.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_New_Role.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/relicmodabilities33traitors.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/relicmodabilities33traitors.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_harbor_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_harbor_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_valley_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_valley_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_outpost_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_outpost_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/RelicMod_Server_islands_p.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/RelicMod_Server_islands_p.js\"; fi && if [ -e \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" ]; then mv -f \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/Patches/islands_map_fix_win64.js\" \"test_game_server_1_folder/WindowsServer/Game/Binaries/Win64/RelicModPatches/islands_map_fix_win64.js\"; fi && perl -pe 's/_ANNOUNCEMENT_/\"\"/g' test_game_server_1_folder/scripts/announcement_win64_template.js > test_game_server_1_folder/scripts/announcement_active.js && cd test_game_server_1_folder && screen -dmS sdgame wine runner.exe \"WindowsServer/Game/Binaries/Win64/GameServer-Win64-Shipping.exe\" Station_Persistent?maxplayers=8?daysbeforestorm=3?dayminutes=9?predatordamage=1.0?weatherintensity=1.0?staminarate=1.0?fuelburnrate=1.0?traitors=2?port=7779 announcement_active.js disconnect_notice_en_win64.js traitor_weight_win64_no_server.js dmg_counter.js"
+  ],
+  "sha256": "7c68c598696a066f1b619264d246df65a52f42be1746747d0ec5e5f876d2cb3a"
+ },
+ "test_constants_unchanged": {
+  "ADMINS": [
+   "431",
+   "432"
+  ],
+  "AVAILABLE_PORTS": [
+   7777,
+   7778,
+   7779
+  ],
+  "COMMANDS_CHANNELS": [
+   521,
+   522
+  ],
+  "DEFAULT_MODIFIERS": {
+   "fuelburnrate": 1.0,
+   "weatherintensity": 1.0,
+   "dayminutes": 9,
+   "daysbeforestorm": 3,
+   "staminarate": 1.0,
+   "maxplayers": 8,
+   "predatordamage": 1.0,
+   "traitors": 2
+  },
+  "DISABLED_SERVERS": [
+   0,
+   1,
+   2
+  ],
+  "EXTENDED_ACCESS_ROLE_ID": 1045,
+  "GAME_MODES": {
+   "normal": {
+    "maxplayers": 8,
+    "name": "👥 Обычный",
+    "traitors": 2
+   },
+   "solo": {
+    "maxplayers": 1,
+    "name": "🎯 Соло",
+    "traitors": 1
+   }
+  },
+  "HISTORY_CHANNEL_ID": 1054,
+  "HOSTER_ROLE_ID": 1046,
+  "MAPS": {
+   "outpost": "Outpost_Persistent",
+   "islands": "Islands_Persistent",
+   "valley": "Valley_Persistent",
+   "harbor": "Station_Persistent"
+  },
+  "MAP_NAMES": {
+   "outpost": "Застава",
+   "islands": "Острова",
+   "valley": "Долина",
+   "harbor": "Гавань"
+  },
+  "MODERATOR_ROLE_ID": 1044,
+  "MODIFIER_DESCRIPTIONS": {
+   "fuelburnrate": "Расход топлива (0.1–2)",
+   "weatherintensity": "Интенсивность погоды (0.25–3)",
+   "dayminutes": "Минут в дне (5–16)",
+   "daysbeforestorm": "Дней до бури (2–7)",
+   "staminarate": "Скорость усталости (0.25–3)",
+   "maxplayers": "Макс. игроков (1–12)",
+   "predatordamage": "Урон волков, медведей (0.25–3)",
+   "traitors": "Количество предателей (0–8)"
+  },
+  "MODS": {
+   "islands_10": "",
+   "islands_11": "",
+   "chill": "",
+   "console": "console_win64.js",
+   "guides": "",
+   "quests": "questsinstant.js",
+   "rand_role": "roles.js",
+   "ability_4": "4abilities.js",
+   "ability_5": "5abilities.js",
+   "ability_cast_start": "ability_cast_start.js",
+   "ability_charge": "ability_charge_fix.js",
+   "ability_upgrade": "ability_upgrade_win64.js",
+   "relic_mod": "",
+   "train_mode": "train_mode.js"
+  },
+  "MODS_DB_NAMES": {
+   "islands_10": "islands_10",
+   "islands_11": "islands_11",
+   "chill": "chill",
+   "console": "console",
+   "guides": "guides",
+   "quests": "quests",
+   "rand_role": "random_roles",
+   "ability_4": "4_abilities",
+   "ability_5": "5_abilities",
+   "ability_cast_start": "silence_start",
+   "ability_charge": "ability_charge",
+   "ability_upgrade": "ability_upgrade",
+   "relic_mod": "relic_mod",
+   "train_mode": "train_mode"
+  },
+  "MOD_NAMES": {
+   "islands_10": "Острова - 10 человек",
+   "islands_11": "Острова - 11 человек",
+   "chill": "Chill",
+   "console": "Консоль",
+   "guides": "Советы по игре",
+   "quests": "Квесты",
+   "rand_role": "Рандомные роли",
+   "ability_4": "Четыре способности",
+   "ability_5": "Пять способностей",
+   "ability_cast_start": "Тишина на старте",
+   "ability_charge": "Ability Charge",
+   "ability_upgrade": "Ability Upgrade",
+   "relic_mod": "RelicMod 1.1.4",
+   "train_mode": "Тренировочный мод"
+  },
+  "PANEL_CHANNEL_ID": 1051,
+  "RANKED_MODS": [
+   "rand_role",
+   "ability_5",
+   "ability_4",
+   "quests",
+   "ability_cast_start",
+   "guides"
+  ],
+  "RESERVATION_LOG_CHANNEL_ID": 1055,
+  "SERVERS": {
+   "0": {
+    "folder": "test_game_server_1_folder",
+    "ip": "test_game_server_1_host",
+    "name": "Сервер 1",
+    "port": 7777,
+    "region": "frankfurt",
+    "region_name": "Франкфурт",
+    "screen_name": "sdgame",
+    "server_id": "sdgame4"
+   },
+   "1": {
+    "folder": "test_game_server_2_folder",
+    "ip": "test_game_server_2_host",
+    "name": "Сервер 2",
+    "port": 7777,
+    "region": "frankfurt",
+    "region_name": "Франкфурт 2",
+    "screen_name": "sdgame",
+    "server_id": "sdgame5"
+   },
+   "2": {
+    "folder": "test_game_server_3_folder",
+    "ip": "test_game_server_3_host",
+    "name": "Сервер 3",
+    "port": 7777,
+    "region": "frankfurt",
+    "region_name": "Франкфурт 3",
+    "screen_name": "sdgame",
+    "server_id": "sdgame6"
+   }
+  },
+  "SERVERS_UNAVAILABLE_MESSAGE": "⛔ Сервера на данный момент недоступны.\ntest_servers_unavailable_note",
+  "SSH_CONFIGS": {
+   "0": {
+    "allow_agent": false,
+    "hostname": "test_game_server_1_host",
+    "key_filename": "test_game_ssh_key_path",
+    "look_for_keys": false,
+    "username": "test_game_server_1_user"
+   },
+   "1": {
+    "allow_agent": false,
+    "hostname": "test_game_server_2_host",
+    "key_filename": "test_game_ssh_key_path",
+    "look_for_keys": false,
+    "username": "test_game_server_2_user"
+   },
+   "2": {
+    "allow_agent": false,
+    "hostname": "test_game_server_3_host",
+    "key_filename": "test_game_ssh_key_path",
+    "look_for_keys": false,
+    "username": "test_game_server_3_user"
+   }
+  }
+ },
+ "test_elo_cache_upload[False-False]": {
+  "best": true,
+  "ok": true,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "put",
+    "test_game_server_2_folder/scripts/elo_cache.json",
+    "{\"A\": {\"elo\": 1700, \"wins\": 0, \"losses\": 0, \"total_games\": 20, \"traitors_games\": 2, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {\"Commander\": {\"games\": 3, \"wins\": 1}}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": true, \"calibration_games\": 0, \"current_name\": \"Альфа\", \"rank\": 1}, \"B\": {\"elo\": 1600, \"wins\": 0, \"losses\": 0, \"total_games\": 8, \"traitors_games\": 4, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": false, \"calibration_games\": 0, \"current_name\": \"Бэ\", \"rank\": 3}, \"C\": {\"elo\": 1650, \"wins\": 0, \"losses\": 0, \"total_games\": 0, \"traitors_games\": 0, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": false, \"calibration_games\": 0, \"current_name\": \"UNKNOWN\", \"rank\": 2}, \"D\": {\"elo\": 1500, \"wins\": 0, \"losses\": 0, \"total_games\": 4, \"traitors_games\": 1, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": false, \"calibration_games\": 0, \"current_name\": \"UNKNOWN\", \"rank\": 4}}"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "put",
+    "test_game_server_2_folder/scripts/traitor_best_winrates.json",
+    "{\"A\": [{\"partner_steam_id\": \"B\", \"partner_name\": \"nB\", \"games\": 3, \"wins\": 2, \"winrate\": 66.7}, {\"partner_steam_id\": \"C\", \"partner_name\": \"nC\", \"games\": 1, \"wins\": 0, \"winrate\": 0.0}], \"B\": [{\"partner_steam_id\": \"A\", \"partner_name\": \"nA\", \"games\": 3, \"wins\": 2, \"winrate\": 66.7}], \"C\": [{\"partner_steam_id\": \"D\", \"partner_name\": \"nD\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}, {\"partner_steam_id\": \"A\", \"partner_name\": \"nA\", \"games\": 1, \"wins\": 0, \"winrate\": 0.0}], \"D\": [{\"partner_steam_id\": \"C\", \"partner_name\": \"nC\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}], \"E\": [{\"partner_steam_id\": \"F\", \"partner_name\": \"F\", \"games\": 2, \"wins\": 2, \"winrate\": 100.0}, {\"partner_steam_id\": \"G\", \"partner_name\": \"G\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}], \"G\": [{\"partner_steam_id\": \"E\", \"partner_name\": \"E\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}], \"F\": [{\"partner_steam_id\": \"E\", \"partner_name\": \"E\", \"games\": 2, \"wins\": 2, \"winrate\": 100.0}]}"
+   ]
+  ]
+ },
+ "test_elo_cache_upload[False-True]": {
+  "best": true,
+  "ok": true,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "put",
+    "test_game_server_2_folder/scripts/elo_cache.json",
+    "{\"A\": {\"elo\": 1700, \"wins\": 0, \"losses\": 0, \"total_games\": 20, \"traitors_games\": 2, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {\"Commander\": {\"games\": 3, \"wins\": 1}}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": true, \"calibration_games\": 0, \"current_name\": \"Альфа\", \"rank\": 1}, \"B\": {\"elo\": 1600, \"wins\": 0, \"losses\": 0, \"total_games\": 8, \"traitors_games\": 4, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": false, \"calibration_games\": 0, \"current_name\": \"Бэ\", \"rank\": 3}, \"C\": {\"elo\": 1650, \"wins\": 0, \"losses\": 0, \"total_games\": 0, \"traitors_games\": 0, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": false, \"calibration_games\": 0, \"current_name\": \"UNKNOWN\", \"rank\": 2}, \"D\": {\"elo\": 1500, \"wins\": 0, \"losses\": 0, \"total_games\": 4, \"traitors_games\": 1, \"traitors_wins\": 0, \"crew_games\": 0, \"crew_wins\": 0, \"role_stats\": {}, \"crew_winstreak\": 0, \"traitor_winstreak\": 0, \"is_calibrated\": false, \"calibration_games\": 0, \"current_name\": \"UNKNOWN\", \"rank\": 4}}"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "write",
+    "test_game_server_2_folder/scripts/traitor_weight_win64_no_server.js",
+    "var AdditionalScore = [\n    [\n        \"A\",\n        35\n    ],\n    [\n        \"B\",\n        -25\n    ],\n    [\n        \"C\",\n        -85\n    ],\n    [\n        \"D\",\n        -60\n    ],\n    [\n        \"GHOST\",\n        40\n    ]\n];"
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "put",
+    "test_game_server_2_folder/scripts/traitor_best_winrates.json",
+    "{\"A\": [{\"partner_steam_id\": \"B\", \"partner_name\": \"nB\", \"games\": 3, \"wins\": 2, \"winrate\": 66.7}, {\"partner_steam_id\": \"C\", \"partner_name\": \"nC\", \"games\": 1, \"wins\": 0, \"winrate\": 0.0}], \"B\": [{\"partner_steam_id\": \"A\", \"partner_name\": \"nA\", \"games\": 3, \"wins\": 2, \"winrate\": 66.7}], \"C\": [{\"partner_steam_id\": \"D\", \"partner_name\": \"nD\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}, {\"partner_steam_id\": \"A\", \"partner_name\": \"nA\", \"games\": 1, \"wins\": 0, \"winrate\": 0.0}], \"D\": [{\"partner_steam_id\": \"C\", \"partner_name\": \"nC\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}], \"E\": [{\"partner_steam_id\": \"F\", \"partner_name\": \"F\", \"games\": 2, \"wins\": 2, \"winrate\": 100.0}, {\"partner_steam_id\": \"G\", \"partner_name\": \"G\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}], \"G\": [{\"partner_steam_id\": \"E\", \"partner_name\": \"E\", \"games\": 1, \"wins\": 1, \"winrate\": 100.0}], \"F\": [{\"partner_steam_id\": \"E\", \"partner_name\": \"E\", \"games\": 2, \"wins\": 2, \"winrate\": 100.0}]}"
+   ]
+  ]
+ },
+ "test_elo_cache_upload[True-True]": {
+  "best": false,
+  "ok": false,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ]
+  ]
+ },
+ "test_execute_ssh_command": [
+  [
+   "connect",
+   "test_game_server_2_host",
+   [
+    [
+     "allow_agent",
+     false
+    ],
+    [
+     "auth_timeout",
+     5
+    ],
+    [
+     "banner_timeout",
+     5
+    ],
+    [
+     "hostname",
+     "test_game_server_2_host"
+    ],
+    [
+     "key_filename",
+     "test_game_ssh_key_path"
+    ],
+    [
+     "look_for_keys",
+     false
+    ],
+    [
+     "timeout",
+     5
+    ],
+    [
+     "username",
+     "test_game_server_2_user"
+    ]
+   ]
+  ],
+  [
+   "exec",
+   "echo hi"
+  ]
+ ],
+ "test_pair_winrates": {
+  "A": [
+   {
+    "games": 3,
+    "partner_name": "nB",
+    "partner_steam_id": "B",
+    "winrate": 66.7,
+    "wins": 2
+   },
+   {
+    "games": 1,
+    "partner_name": "nC",
+    "partner_steam_id": "C",
+    "winrate": 0.0,
+    "wins": 0
+   }
+  ],
+  "B": [
+   {
+    "games": 3,
+    "partner_name": "nA",
+    "partner_steam_id": "A",
+    "winrate": 66.7,
+    "wins": 2
+   }
+  ],
+  "C": [
+   {
+    "games": 1,
+    "partner_name": "nD",
+    "partner_steam_id": "D",
+    "winrate": 100.0,
+    "wins": 1
+   },
+   {
+    "games": 1,
+    "partner_name": "nA",
+    "partner_steam_id": "A",
+    "winrate": 0.0,
+    "wins": 0
+   }
+  ],
+  "D": [
+   {
+    "games": 1,
+    "partner_name": "nC",
+    "partner_steam_id": "C",
+    "winrate": 100.0,
+    "wins": 1
+   }
+  ],
+  "E": [
+   {
+    "games": 2,
+    "partner_name": "F",
+    "partner_steam_id": "F",
+    "winrate": 100.0,
+    "wins": 2
+   },
+   {
+    "games": 1,
+    "partner_name": "G",
+    "partner_steam_id": "G",
+    "winrate": 100.0,
+    "wins": 1
+   }
+  ],
+  "F": [
+   {
+    "games": 2,
+    "partner_name": "E",
+    "partner_steam_id": "E",
+    "winrate": 100.0,
+    "wins": 2
+   }
+  ],
+  "G": [
+   {
+    "games": 1,
+    "partner_name": "E",
+    "partner_steam_id": "E",
+    "winrate": 100.0,
+    "wins": 1
+   }
+  ]
+ },
+ "test_ranked_and_db_names_matrix": {
+  "all_disabled": true,
+  "rows": [
+   [
+    [],
+    "normal",
+    null,
+    true,
+    []
+   ],
+   [
+    [],
+    "normal",
+    "harbor",
+    true,
+    []
+   ],
+   [
+    [],
+    "normal",
+    "valley",
+    true,
+    []
+   ],
+   [
+    [],
+    "normal",
+    "outpost",
+    false,
+    []
+   ],
+   [
+    [],
+    "normal",
+    "islands",
+    false,
+    []
+   ],
+   [
+    [],
+    "solo",
+    null,
+    false,
+    []
+   ],
+   [
+    [],
+    "solo",
+    "harbor",
+    false,
+    []
+   ],
+   [
+    [],
+    "solo",
+    "valley",
+    false,
+    []
+   ],
+   [
+    [],
+    "solo",
+    "outpost",
+    false,
+    []
+   ],
+   [
+    [],
+    "solo",
+    "islands",
+    false,
+    []
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "normal",
+    null,
+    true,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "normal",
+    "harbor",
+    true,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "normal",
+    "valley",
+    true,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "random_roles"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "normal",
+    null,
+    true,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "normal",
+    "harbor",
+    true,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "normal",
+    "valley",
+    true,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "random_roles",
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "normal",
+    null,
+    true,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "normal",
+    "harbor",
+    true,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "normal",
+    "valley",
+    true,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "ability_cast_start"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "silence_start"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "relic_mod"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "relic_mod"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "chill"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "chill"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_11"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "islands_10",
+     "guides"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "islands_10",
+     "guides"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "relic_mod",
+     "islands_11"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "random_roles",
+     "relic_mod",
+     "islands_11"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "guides",
+     "quests",
+     "ability_5",
+     "ability_4",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "guides",
+     "quests",
+     "5_abilities",
+     "4_abilities",
+     "console",
+     "train_mode",
+     "ability_upgrade",
+     "ability_charge"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "rand_role",
+     "ability_5",
+     "ability_4",
+     "ability_cast_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "random_roles",
+     "5_abilities",
+     "4_abilities",
+     "silence_start",
+     "ability_charge",
+     "train_mode",
+     "ability_upgrade",
+     "quests",
+     "guides",
+     "console",
+     "chill",
+     "relic_mod",
+     "islands_11",
+     "islands_10"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "normal",
+    null,
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "normal",
+    "harbor",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "normal",
+    "valley",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "normal",
+    "outpost",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "normal",
+    "islands",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "solo",
+    null,
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "solo",
+    "harbor",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "solo",
+    "valley",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "solo",
+    "outpost",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ],
+   [
+    [
+     "unknown_mod"
+    ],
+    "solo",
+    "islands",
+    false,
+    [
+     "unknown_mod"
+    ]
+   ]
+  ]
+ },
+ "test_role_checks[roles0]": {
+  "check_user_has_permission": false,
+  "has_extended_access": false,
+  "is_moderator": false
+ },
+ "test_role_checks[roles1]": {
+  "check_user_has_permission": true,
+  "has_extended_access": false,
+  "is_moderator": false
+ },
+ "test_role_checks[roles2]": {
+  "check_user_has_permission": false,
+  "has_extended_access": false,
+  "is_moderator": true
+ },
+ "test_role_checks[roles3]": {
+  "check_user_has_permission": false,
+  "has_extended_access": true,
+  "is_moderator": false
+ },
+ "test_role_checks[roles4]": {
+  "check_user_has_permission": true,
+  "has_extended_access": true,
+  "is_moderator": true
+ },
+ "test_ssh_status_and_guuid[responses0-False]": {
+  "guuid": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'LogGameState: GUUID=' test_game_server_3_folder/WindowsServer/Game/Saved/Logs/Game.log | tail -1"
+   ]
+  ],
+  "status": true
+ },
+ "test_ssh_status_and_guuid[responses1-False]": {
+  "guuid": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'LogGameState: GUUID=' test_game_server_3_folder/WindowsServer/Game/Saved/Logs/Game.log | tail -1"
+   ]
+  ],
+  "status": false
+ },
+ "test_ssh_status_and_guuid[responses2-False]": {
+  "guuid": "22EF90D44731D9D9D524AFB96E99634A",
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'LogGameState: GUUID=' test_game_server_3_folder/WindowsServer/Game/Saved/Logs/Game.log | tail -1"
+   ]
+  ],
+  "status": false
+ },
+ "test_ssh_status_and_guuid[responses3-False]": {
+  "guuid": null,
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "screen -list | grep sdgame || true"
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ],
+   [
+    "exec",
+    "grep 'LogGameState: GUUID=' test_game_server_3_folder/WindowsServer/Game/Saved/Logs/Game.log | tail -1"
+   ]
+  ],
+  "status": false
+ },
+ "test_ssh_status_and_guuid[responses4-True]": {
+  "guuid": "error: connection refused",
+  "ssh": [
+   [
+    "connect",
+    "test_game_server_2_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_2_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_2_user"
+     ]
+    ]
+   ],
+   [
+    "connect",
+    "test_game_server_3_host",
+    [
+     [
+      "allow_agent",
+      false
+     ],
+     [
+      "auth_timeout",
+      5
+     ],
+     [
+      "banner_timeout",
+      5
+     ],
+     [
+      "hostname",
+      "test_game_server_3_host"
+     ],
+     [
+      "key_filename",
+      "test_game_ssh_key_path"
+     ],
+     [
+      "look_for_keys",
+      false
+     ],
+     [
+      "timeout",
+      5
+     ],
+     [
+      "username",
+      "test_game_server_3_user"
+     ]
+    ]
+   ]
+  ],
+  "status": false
+ },
+ "test_state_and_presets": [
+  [
+   [
+    7777,
+    7778,
+    7779,
+    7777
+   ],
+   7777,
+   {
+    "current_port": 7778,
+    "host_id": "u1",
+    "host_name": "Хост",
+    "host_port": 7778,
+    "server": "sdgame4",
+    "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+   },
+   null,
+   "datetime.datetime(2026, 10, 20, 12, 10, 30)",
+   {
+    "reserved_by_id": "u3",
+    "reserved_by_name": "Резерв",
+    "reserved_until": "datetime.datetime(2026, 10, 20, 12, 10, 30)"
+   },
+   [
+    false,
+    true,
+    false
+   ],
+   null,
+   null,
+   {
+    "is_admin": false,
+    "map": "harbor",
+    "mode": "normal",
+    "mods": [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "region": "frankfurt"
+   },
+   {
+    "is_admin": true,
+    "map": "harbor",
+    "mode": "normal",
+    "mods": [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "region": "frankfurt"
+   },
+   {
+    "is_admin": false,
+    "map": "valley",
+    "mode": "normal",
+    "mods": [
+     "quests"
+    ],
+    "region": "frankfurt"
+   },
+   {
+    "is_admin": true,
+    "map": "valley",
+    "mode": "solo",
+    "mods": [
+     "quests"
+    ],
+    "region": "frankfurt"
+   },
+   {
+    "is_admin": false,
+    "map": "harbor",
+    "mode": "normal",
+    "mods": [
+     "rand_role",
+     "ability_cast_start"
+    ],
+    "region": "frankfurt"
+   },
+   [
+    null,
+    [
+     null,
+     false
+    ],
+    [
+     null,
+     false
+    ]
+   ],
+   [
+    null,
+    [
+     {
+      "maxplayers": 9
+     },
+     false
+    ]
+   ],
+   [
+    {
+     "maxplayers": 9
+    },
+    null
+   ],
+   null,
+   556
+  ],
+  {
+   "console_access_col": [],
+   "game_matches_col": [
+    {
+     "created_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "guuid": "GUUID1",
+     "is_ranked_mods": false,
+     "mods": [
+      "random_roles",
+      "chill"
+     ]
+    },
+    {
+     "created_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "guuid": "GUUID2",
+     "is_ranked_mods": true,
+     "mods": [
+      "random_roles"
+     ]
+    }
+   ],
+   "discord_hosts_notify_col": [
+    {
+     "current_port": 7778,
+     "host_id": null,
+     "host_name": null,
+     "host_port": 7778,
+     "server": "sdgame4",
+     "started_at": null
+    },
+    {
+     "host_id": "u2",
+     "host_name": "Без порта",
+     "reserved_until": "datetime.datetime(2026, 10, 20, 12, 0, 29, 123000)",
+     "server": "sdgame5",
+     "started_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)"
+    },
+    {
+     "server": "sdgame6"
+    },
+    {
+     "host_id": null,
+     "host_name": null,
+     "server": "unknown_server",
+     "started_at": null
+    }
+   ],
+   "discord_hosts_presets_col": [
+    {
+     "user_id": "partial"
+    },
+    {
+     "custom_modifiers": {
+      "maxplayers": 9
+     },
+     "custom_modifiers_enabled": true,
+     "map": "valley",
+     "mode": "solo",
+     "mods": [
+      "quests"
+     ],
+     "region": "frankfurt",
+     "updated_at": "datetime.datetime(2026, 10, 20, 12, 0, 30, 123000)",
+     "user_id": "u1"
+    },
+    {
+     "custom_modifiers_enabled": false,
+     "user_id": "u9"
+    }
+   ],
+   "discord_panel_col": [
+    {
+     "message_id": 556
+    }
+   ],
+   "elo_overrides_col": [],
+   "history_player_stats_col": [],
+   "player_ratings_col": [],
+   "seasons_col": []
+  }
+ ],
+ "test_uptime_text[0]": "0 мин. назад",
+ "test_uptime_text[1439]": "23 ч. 59 мин. назад",
+ "test_uptime_text[1440]": "1 дн. 0 ч. назад",
+ "test_uptime_text[4445]": "3 дн. 2 ч. назад",
+ "test_uptime_text[59]": "59 мин. назад",
+ "test_uptime_text[5]": "5 мин. назад",
+ "test_uptime_text[60]": "1 ч. 0 мин. назад",
+ "test_uptime_text[61]": "1 ч. 1 мин. назад"
+}

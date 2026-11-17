@@ -1,0 +1,383 @@
+{
+ "test_autocomplete[CHAR]": [
+  [
+   "Charlie",
+   "S3"
+  ]
+ ],
+ "test_autocomplete[\\u0431\\u0440\\u0430\\u0442]": [
+  [
+   "Брат",
+   "S2"
+  ]
+ ],
+ "test_autocomplete[]": [
+  [
+   "Alpha",
+   "S1"
+  ],
+  [
+   "Брат",
+   "S2"
+  ],
+  [
+   "Charlie",
+   "S3"
+  ],
+  [
+   "Unknown",
+   "S4"
+  ]
+ ],
+ "test_autocomplete[al]": [
+  [
+   "Alpha",
+   "S1"
+  ]
+ ],
+ "test_autocomplete[zzz]": [],
+ "test_report_flow[S1-False]": {
+  "log": [
+   {
+    "color": 15158332,
+    "fields": [
+     {
+      "inline": true,
+      "name": "На игрока",
+      "value": "**Alpha**"
+     },
+     {
+      "inline": true,
+      "name": "От",
+      "value": "<@42>"
+     },
+     {
+      "inline": false,
+      "name": "Причины",
+      "value": "• Читы\n• По рофлу"
+     }
+    ],
+    "flags": 0,
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "🚩 Новый репорт",
+    "type": "rich"
+   }
+  ],
+  "reports": [
+   {
+    "anonymous": false,
+    "created_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+    "reasons": [
+     "Читы",
+     "По рофлу"
+    ],
+    "reporter_id": "42",
+    "reporter_name": "Репортер",
+    "status": "open",
+    "target_name": "Alpha",
+    "target_steam_id": "S1"
+   }
+  ],
+  "steps": [
+   [
+    [
+     "send",
+     "Репорт на **Alpha**. Выберите причину(ы):",
+     [
+      [
+       "ReportReasonSelect",
+       "Выберите причину(ы) репорта",
+       1,
+       6,
+       [
+        "Читы",
+        "Консоль",
+        "Негативное поведение",
+        "Отсутствие тумана",
+        "По рофлу",
+        "Троллинг в игре"
+       ]
+      ]
+     ],
+     120,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Репорт отправлен. Спасибо!",
+     null
+    ]
+   ]
+  ]
+ },
+ "test_report_flow[S2-True]": {
+  "log": [
+   {
+    "color": 15158332,
+    "fields": [
+     {
+      "inline": true,
+      "name": "На игрока",
+      "value": "**Bravo (Брат)**"
+     },
+     {
+      "inline": true,
+      "name": "От",
+      "value": "Аноним"
+     },
+     {
+      "inline": false,
+      "name": "Причины",
+      "value": "• Читы\n• По рофлу"
+     }
+    ],
+    "flags": 0,
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "🚩 Новый репорт",
+    "type": "rich"
+   }
+  ],
+  "reports": [
+   {
+    "anonymous": true,
+    "created_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+    "reasons": [
+     "Читы",
+     "По рофлу"
+    ],
+    "reporter_id": "42",
+    "reporter_name": "Репортер",
+    "status": "open",
+    "target_name": "Bravo (Брат)",
+    "target_steam_id": "S2"
+   }
+  ],
+  "steps": [
+   [
+    [
+     "send",
+     "Репорт на **Bravo (Брат)**. Выберите причину(ы):",
+     [
+      [
+       "ReportReasonSelect",
+       "Выберите причину(ы) репорта",
+       1,
+       6,
+       [
+        "Читы",
+        "Консоль",
+        "Негативное поведение",
+        "Отсутствие тумана",
+        "По рофлу",
+        "Троллинг в игре"
+       ]
+      ]
+     ],
+     120,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Репорт отправлен. Спасибо!",
+     null
+    ]
+   ]
+  ]
+ },
+ "test_report_flow[S3-False]": {
+  "log": [
+   {
+    "color": 15158332,
+    "fields": [
+     {
+      "inline": true,
+      "name": "На игрока",
+      "value": "**Charlie**"
+     },
+     {
+      "inline": true,
+      "name": "От",
+      "value": "<@42>"
+     },
+     {
+      "inline": false,
+      "name": "Причины",
+      "value": "• Читы\n• По рофлу"
+     }
+    ],
+    "flags": 0,
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "🚩 Новый репорт",
+    "type": "rich"
+   }
+  ],
+  "reports": [
+   {
+    "anonymous": false,
+    "created_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+    "reasons": [
+     "Читы",
+     "По рофлу"
+    ],
+    "reporter_id": "42",
+    "reporter_name": "Репортер",
+    "status": "open",
+    "target_name": "Charlie",
+    "target_steam_id": "S3"
+   }
+  ],
+  "steps": [
+   [
+    [
+     "send",
+     "Репорт на **Charlie**. Выберите причину(ы):",
+     [
+      [
+       "ReportReasonSelect",
+       "Выберите причину(ы) репорта",
+       1,
+       6,
+       [
+        "Читы",
+        "Консоль",
+        "Негативное поведение",
+        "Отсутствие тумана",
+        "По рофлу",
+        "Троллинг в игре"
+       ]
+      ]
+     ],
+     120,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Репорт отправлен. Спасибо!",
+     null
+    ]
+   ]
+  ]
+ },
+ "test_report_flow[S4-False]": {
+  "log": [
+   {
+    "color": 15158332,
+    "fields": [
+     {
+      "inline": true,
+      "name": "На игрока",
+      "value": "**S4**"
+     },
+     {
+      "inline": true,
+      "name": "От",
+      "value": "<@42>"
+     },
+     {
+      "inline": false,
+      "name": "Причины",
+      "value": "• Читы\n• По рофлу"
+     }
+    ],
+    "flags": 0,
+    "timestamp": "2026-10-20T12:00:00+00:00",
+    "title": "🚩 Новый репорт",
+    "type": "rich"
+   }
+  ],
+  "reports": [
+   {
+    "anonymous": false,
+    "created_at": "datetime.datetime(2026, 10, 20, 12, 0)",
+    "reasons": [
+     "Читы",
+     "По рофлу"
+    ],
+    "reporter_id": "42",
+    "reporter_name": "Репортер",
+    "status": "open",
+    "target_name": "S4",
+    "target_steam_id": "S4"
+   }
+  ],
+  "steps": [
+   [
+    [
+     "send",
+     "Репорт на **S4**. Выберите причину(ы):",
+     [
+      [
+       "ReportReasonSelect",
+       "Выберите причину(ы) репорта",
+       1,
+       6,
+       [
+        "Читы",
+        "Консоль",
+        "Негативное поведение",
+        "Отсутствие тумана",
+        "По рофлу",
+        "Троллинг в игре"
+       ]
+      ]
+     ],
+     120,
+     true
+    ]
+   ],
+   [
+    [
+     "edit",
+     "✅ Репорт отправлен. Спасибо!",
+     null
+    ]
+   ]
+  ]
+ },
+ "test_report_flow[nope-False]": {
+  "log": [],
+  "reports": [],
+  "steps": [
+   [
+    [
+     "send",
+     "❌ Игрок не найден.",
+     null,
+     null,
+     true
+    ]
+   ]
+  ]
+ },
+ "test_slash_command_unchanged": {
+  "contexts": null,
+  "default_member_permissions": null,
+  "description": "Подать репорт на игрока",
+  "dm_permission": true,
+  "integration_types": null,
+  "name": "report",
+  "nsfw": false,
+  "options": [
+   {
+    "autocomplete": true,
+    "description": "Игрок, на которого подаётся репорт (поиск по нику)",
+    "name": "player",
+    "required": true,
+    "type": 3
+   },
+   {
+    "description": "Скрыть ваш ник в канале репортов",
+    "name": "anonymous",
+    "required": false,
+    "type": 5
+   }
+  ],
+  "type": 1
+ }
+}

@@ -1,0 +1,5 @@
+# Скрипты для Linux-сервера: только LF, иначе bash не запустит их ("bad interpreter")
+*.sh text eol=lf
+# Git-хуки выполняет sh: только LF
+.githooks/* text eol=lf
+deploy/post-receive text eol=lf

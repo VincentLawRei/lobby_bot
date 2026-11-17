@@ -1,0 +1,32 @@
+# Секреты и личные данные
+.env
+*.env
+credentials.json
+elo_overrides.json
+env_new_keys.txt
+*.pem
+*.key
+*_rsa
+*_ed25519
+
+# Данные и сгенерированные файлы
+game_csvs/
+game_csvs_processed/
+media/
+logs/
+
+# Окружение и IDE
+.venv/
+venv/
+.idea/
+.vscode/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.pyc
+.DS_Store
+uwsgi*.ini
+
+# Личные настройки Claude Code (разрешения)
+.claude/settings.local.json

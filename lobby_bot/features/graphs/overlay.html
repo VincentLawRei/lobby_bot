@@ -1,0 +1,782 @@
+<script>
+(function() {
+  console.log("🚀 Инициализация кастомных элементов...");
+
+let selectedNodeId = null;
+let originalEdgeColors = {};
+let isProcessingClick = false;
+
+const communitiesData = __COMMUNITIES_JSON__;
+const topDailyData = __TOP_DAILY_JSON__;
+const topWeeklyData = __TOP_WEEKLY_JSON__;
+const topMonthlyData = __TOP_MONTHLY_JSON__;
+const totalPlayersBeforeFilter = __TOTAL_PLAYERS_BEFORE_FILTER__;
+const totalPlayersAfterFilter = __TOTAL_PLAYERS_AFTER_FILTER__;
+const eloLeaderboardData = __ELO_LEADERBOARD_JSON__;
+
+  // === ИНФО-ПАНЕЛЬ ===
+  const infoBox = document.createElement('div');
+  Object.assign(infoBox.style, {
+    position: 'fixed',
+    top: '20px',
+    right: '20px',
+    background: 'rgba(30,30,30,0.95)',
+    color: 'white',
+    padding: '20px',
+    borderRadius: '12px',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
+    fontFamily: 'system-ui, -apple-system, sans-serif',
+    maxHeight: 'calc(100vh - 370px)',
+    overflowY: 'auto',
+    minWidth: '300px',
+    display: 'none',
+    zIndex: '99999'
+  });
+  document.body.appendChild(infoBox);
+
+  function showInfo(playerName, connections) {
+    if (!connections.length) {
+      infoBox.innerHTML = `
+        <h3 style="margin:0 0 10px 0; color:#4dabf7; font-size:18px;">${playerName}</h3>
+        <p style="color:#aaa; margin:0;">Нет совместных игр</p>
+      `;
+    } else {
+const currentNode = network.body.data.nodes.get(selectedNodeId);
+const lastGame = currentNode && currentNode.last_game ? currentNode.last_game : 'неизвестно';
+const community = currentNode && currentNode.community ? currentNode.community : 'N/A';
+const lastParty = currentNode && currentNode.last_party ? currentNode.last_party : null;
+
+// 🔥 СТАТИСТИКА
+const overallWr = currentNode && currentNode.overall_wr ? currentNode.overall_wr : 0;
+const traitorsWr = currentNode && currentNode.traitors_wr ? currentNode.traitors_wr : null;
+const crewWr = currentNode && currentNode.crew_wr ? currentNode.crew_wr : null;
+const traitorsPick = currentNode && currentNode.traitors_pick ? currentNode.traitors_pick : 0;
+const crewPick = currentNode && currentNode.crew_pick ? currentNode.crew_pick : 0;
+const mostCommonRole = currentNode && currentNode.most_common_role ? currentNode.most_common_role : 'N/A';
+const totalGames = currentNode && currentNode.total_games ? currentNode.total_games : 0;
+
+let html = `
+  <h3 style="margin:0 0 10px 0; color:#4dabf7; font-size:18px;">${playerName}</h3>
+
+  <div style="background:rgba(255,255,255,0.05); padding:10px; border-radius:6px; margin-bottom:10px;">
+    <p style="margin:0 0 5px 0; color:#fff; font-size:15px; font-weight:bold;">
+      📊 Винрейт: <span style="color:#52BE80;">${overallWr}%</span>
+      <span style="color:#666; font-size:11px; margin-left:4px;">(${totalGames} игр)</span>
+    </p>
+    <p style="margin:0 0 3px 0; color:#888; font-size:13px;">
+      🔪 За предателей: ${traitorsWr !== null ? traitorsWr + '%' : 'нет данных'}
+    </p>
+    <p style="margin:0 0 3px 0; color:#888; font-size:13px;">
+      🛡️ За мирных: ${crewWr !== null ? crewWr + '%' : 'нет данных'}
+    </p>
+    <p style="margin:0 0 3px 0; color:#888; font-size:13px;">
+      🎲 Выпадение: <span style="color:#FF6B6B;">${traitorsPick}%</span> / <span style="color:#4ECDC4;">${crewPick}%</span>
+    </p>
+    <p style="margin:0; color:#888; font-size:13px;">
+      👤 Частая роль: <span style="color:#fff;">${mostCommonRole}</span>
+    </p>
+  </div>
+
+  <p style="margin:0 0 5px 0; color:#888; font-size:13px;">
+    🎨 Сообщество: <span style="color:#fff;">${community}</span>
+  </p>
+  <p style="margin:0 0 5px 0; color:#888; font-size:13px;">
+    📅 Последняя игра: <span style="color:#fff;">${lastGame}</span>
+  </p>
+  ${lastParty ? `
+    <p style="margin:0 0 15px 0; color:#888; font-size:12px;">
+      👥 Последняя партия:<br>
+      <span style="color:#fff; word-wrap:break-word; display:block; margin-top:4px; line-height:1.4;">${lastParty}</span>
+    </p>
+  ` : '<div style="margin-bottom:10px;"></div>'}
+  <table style="width:100%; border-collapse:collapse; font-size:14px;">
+    <thead>
+      <tr style="border-bottom:2px solid #444;">
+        <th align="left" style="padding:8px 0; color:#888;">Игрок</th>
+        <th align="right" style="padding:8px 0; color:#888;">Игр</th>
+      </tr>
+    </thead>
+    <tbody>
+`;
+connections.forEach(([name, count]) => {
+  html += `
+    <tr style="border-bottom:1px solid #333;">
+      <td style="padding:6px 0; color:#4dabf7; cursor:pointer; transition: color 0.2s;" 
+          class="clickable-player" 
+          data-player-name="${name}"
+          onmouseover="this.style.color='#64e6ff'" 
+          onmouseout="this.style.color='#4dabf7'">
+        ${name}
+      </td>
+      <td align="right" style="padding:6px 0; color:#4dabf7; font-weight:bold;">${count}</td>
+    </tr>
+  `;
+});
+      html += '</tbody></table>';
+infoBox.innerHTML = html;
+
+const playerLinks = infoBox.querySelectorAll('.clickable-player');
+const oldHandler = infoBox._clickHandler;
+if (oldHandler) {
+  infoBox.removeEventListener('click', oldHandler);
+}
+
+const clickHandler = (e) => {
+  const playerItem = e.target.closest('.clickable-player');
+  if (!playerItem) return;
+
+  const playerName = playerItem.getAttribute('data-player-name');
+  const nodes = network.body.data.nodes.get();
+  const targetNode = nodes.find(n => n.label === playerName);
+
+  if (targetNode) {
+    network.selectNodes([targetNode.id]);
+    handleNodeClick(targetNode.id);
+    network.focus(targetNode.id, {
+      animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+    });
+  }
+};
+
+infoBox._clickHandler = clickHandler;
+infoBox.addEventListener('click', clickHandler);
+}
+infoBox.style.display = 'block';
+  }
+
+  function hideInfo() {
+    infoBox.style.display = 'none';
+  }
+
+  // === 🔥 СТАТИСТИКА СООБЩЕСТВ (СПРАВА СНИЗУ) - ВСЕГДА ПОКАЗАНА ===
+  const communityStats = document.createElement('div');
+  Object.assign(communityStats.style, {
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    background: 'rgba(30,30,30,0.95)',
+    color: 'white',
+    padding: '12px',
+    borderRadius: '10px',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
+    fontFamily: 'system-ui, -apple-system, sans-serif',
+    maxHeight: '300px',
+    overflowY: 'auto',
+    minWidth: '200px',
+    maxWidth: '250px',
+    zIndex: '99998'
+  });
+
+  const header = document.createElement('h4');
+  header.style.cssText = 'margin:0 0 8px 0; color:#4dabf7; font-size:14px;';
+  header.textContent = '🎨 Сообщества';
+  communityStats.appendChild(header);
+
+  communitiesData.forEach(comm => {
+    const commDiv = document.createElement('div');
+    Object.assign(commDiv.style, {
+      marginBottom: '6px',
+      padding: '6px',
+      background: 'rgba(255,255,255,0.05)',
+      borderRadius: '5px',
+      borderLeft: `3px solid ${comm.color}`,
+      cursor: 'pointer',
+      transition: 'background 0.2s'
+    });
+
+    commDiv.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span style="color:${comm.color}; font-weight:bold; font-size:12px;">#${comm.id}</span>
+        <span style="color:#888; font-size:11px;">${comm.size} игр.</span>
+      </div>
+      ${comm.top_hosts.length > 0 ? `
+        <div style="color:#666; font-size:10px; margin-top:3px;">
+          👑 ${comm.top_hosts.join(', ')}
+        </div>
+      ` : ''}
+    `;
+
+    const membersDiv = document.createElement('div');
+    Object.assign(membersDiv.style, {
+      display: 'none',
+      marginTop: '6px',
+      maxHeight: '150px',
+      overflowY: 'auto',
+      background: 'rgba(0,0,0,0.3)',
+      padding: '6px',
+      borderRadius: '4px'
+    });
+    commDiv.appendChild(membersDiv);
+
+    commDiv.addEventListener('mouseenter', () => {
+      commDiv.style.background = 'rgba(255,255,255,0.1)';
+    });
+    commDiv.addEventListener('mouseleave', () => {
+      commDiv.style.background = 'rgba(255,255,255,0.05)';
+    });
+
+    commDiv.addEventListener('click', (e) => {
+      if (e.target.classList.contains('member-item')) return;
+
+      if (membersDiv.style.display === 'none') {
+        const nodes = network.body.data.nodes.get();
+        const members = nodes
+          .filter(n => n.community === `#${comm.id}`)
+          .sort((a, b) => (b.size || 0) - (a.size || 0));
+
+        membersDiv.innerHTML = '<div style="color:#aaa; font-size:10px; margin-bottom:4px; font-weight:bold;">Участники:</div>';
+
+        members.forEach((member, idx) => {
+          const memberItem = document.createElement('div');
+          memberItem.className = 'member-item';
+          Object.assign(memberItem.style, {
+            padding: '3px 5px',
+            marginBottom: '2px',
+            background: 'rgba(255,255,255,0.05)',
+            borderRadius: '3px',
+            fontSize: '12px',
+            color: '#4dabf7',
+            cursor: 'pointer',
+            transition: 'background 0.2s'
+          });
+          memberItem.textContent = `${idx + 1}. ${member.label}`;
+
+          memberItem.addEventListener('mouseenter', () => {
+            memberItem.style.background = 'rgba(77,171,247,0.2)';
+          });
+          memberItem.addEventListener('mouseleave', () => {
+            memberItem.style.background = 'rgba(255,255,255,0.05)';
+          });
+
+memberItem.addEventListener('click', (e) => {
+  e.stopPropagation();
+  network.selectNodes([member.id]);
+  handleNodeClick(member.id);
+  network.focus(member.id, {
+    animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+  });
+});
+
+          membersDiv.appendChild(memberItem);
+        });
+
+        membersDiv.style.display = 'block';
+      } else {
+        membersDiv.style.display = 'none';
+      }
+    });
+
+    communityStats.appendChild(commDiv);
+  });
+
+  document.body.appendChild(communityStats);
+
+  // === 🔥 СЧЁТЧИК ИГРОКОВ ===
+  const playerCounter = document.createElement('div');
+  Object.assign(playerCounter.style, {
+    position: 'fixed',
+    top: '20px',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    background: 'rgba(30,30,30,0.95)',
+    color: 'white',
+    padding: '12px 24px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 16px rgba(0,0,0,0.6)',
+    fontFamily: 'system-ui, -apple-system, sans-serif',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    zIndex: '99997',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '8px'
+  });
+
+  const totalPlayers = totalPlayersBeforeFilter;
+  const displayedPlayers = totalPlayersAfterFilter;
+  playerCounter.innerHTML = `
+    <span style="color:#4dabf7; font-size:20px;">👥</span>
+    <span style="color:#fff;">${displayedPlayers}</span>
+    <span style="color:#888; font-size:13px;">из ${totalPlayers} игроков</span>
+  `;
+
+  document.body.appendChild(playerCounter);
+
+  // === УПРАВЛЕНИЕ ВИДИМОСТЬЮ СВЯЗЕЙ ===
+  function hideAllEdges() {
+    const edges = network.body.data.edges.get();
+    const updates = edges.map(e => {
+      if (!originalEdgeColors[e.id]) {
+        originalEdgeColors[e.id] = e.color;
+      }
+      return {
+        id: e.id,
+        color: e.color.replace(/rgba\((\d+),\s*(\d+),\s*(\d+),\s*[\d.]+\)/, 'rgba($1,$2,$3,0)')
+      };
+    });
+    network.body.data.edges.update(updates);
+  }
+
+  function showNodeEdges(nodeId) {
+    const edges = network.body.data.edges.get();
+    const connectedEdges = edges.filter(e => 
+      String(e.from) === String(nodeId) || String(e.to) === String(nodeId)
+    );
+
+    const updates = connectedEdges.map(e => {
+      let newColor;
+
+      if (e.manual) {
+        newColor = 'rgba(255, 60, 60, 0.85)';
+      } else if (e.title && e.title.includes('NORM:')) {
+        const normMatch = e.title.match(/NORM:([\d.]+)/);
+        const normWeight = normMatch ? parseFloat(normMatch[1]) : 0;
+
+        if (normWeight > 0.7) {
+          newColor = 'rgba(100, 230, 100, 0.7)';
+        } else if (normWeight > 0.4) {
+          newColor = 'rgba(200, 200, 100, 0.5)';
+        } else {
+          newColor = 'rgba(180, 180, 180, 0.35)';
+        }
+      } else {
+        newColor = 'rgba(180, 180, 180, 0.35)';
+      }
+
+      return {
+        id: e.id,
+        color: newColor
+      };
+    });
+
+    network.body.data.edges.update(updates);
+  }
+
+  // === ПОИСК ===
+  const searchContainer = document.createElement('div');
+  Object.assign(searchContainer.style, {
+    position: 'fixed',
+    top: '20px',
+    left: '20px',
+    zIndex: '99999'
+  });
+  document.body.appendChild(searchContainer);
+
+  const searchBox = document.createElement('input');
+  Object.assign(searchBox.style, {
+    padding: '12px 15px',
+    borderRadius: '8px',
+    border: 'none',
+    background: 'rgba(30,30,30,0.95)',
+    color: '#fff',
+    fontSize: '14px',
+    width: '280px',
+    outline: 'none',
+    boxShadow: '0 4px 16px rgba(0,0,0,0.4)'
+  });
+  searchBox.placeholder = '🔍 Поиск игрока...';
+  searchContainer.appendChild(searchBox);
+
+  // === 🔥 ТОП АКТИВНЫХ С ПЕРЕКЛЮЧАТЕЛЕМ ===
+  const weeklyTop = document.createElement('div');
+  Object.assign(weeklyTop.style, {
+    position: 'fixed',
+    top: '80px',
+    left: '20px',
+    background: 'rgba(30,30,30,0.95)',
+    color: 'white',
+    padding: '15px',
+    borderRadius: '12px',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
+    fontFamily: 'system-ui, -apple-system, sans-serif',
+    maxHeight: '400px',
+    overflowY: 'auto',
+    minWidth: '280px',
+    zIndex: '99997'
+  });
+
+  let currentPeriod = 'day';
+
+function renderTopPlayers() {
+    const data = currentPeriod === 'day' ? topDailyData : currentPeriod === 'week' ? topWeeklyData : topMonthlyData;
+    const title = currentPeriod === 'day' ? '⚡ Топ 24ч' : currentPeriod === 'week' ? '🔥 Топ недели' : '📅 Топ месяца';
+
+    let topHtml = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <h4 style="margin:0; color:#4dabf7; font-size:14px;">${title}</h4>
+        <div style="display:flex; gap:4px;">
+          <button class="period-btn" data-period="day" style="
+            padding:4px 8px;
+            border:none;
+            background:${currentPeriod === 'day' ? '#4dabf7' : 'rgba(255,255,255,0.1)'};
+            color:white;
+            border-radius:4px;
+            cursor:pointer;
+            font-size:11px;
+            transition:background 0.2s;
+          ">24ч</button>
+          <button class="period-btn" data-period="week" style="
+            padding:4px 8px;
+            border:none;
+            background:${currentPeriod === 'week' ? '#4dabf7' : 'rgba(255,255,255,0.1)'};
+            color:white;
+            border-radius:4px;
+            cursor:pointer;
+            font-size:11px;
+            transition:background 0.2s;
+          ">7д</button>
+          <button class="period-btn" data-period="month" style="
+            padding:4px 8px;
+            border:none;
+            background:${currentPeriod === 'month' ? '#4dabf7' : 'rgba(255,255,255,0.1)'};
+            color:white;
+            border-radius:4px;
+            cursor:pointer;
+            font-size:11px;
+            transition:background 0.2s;
+          ">30д</button>
+        </div>
+      </div>
+    `;
+
+    topHtml += '<table style="width:100%; border-collapse:collapse; font-size:12px;">';
+    topHtml += `
+      <thead>
+        <tr style="border-bottom:2px solid #444;">
+          <th style="padding:6px 0; color:#888; text-align:left;">#</th>
+          <th style="padding:6px 4px; color:#888; text-align:left;">Игрок</th>
+          <th style="padding:6px 0; color:#888; text-align:center;">Игр</th>
+          <th style="padding:6px 0; color:#888; text-align:right;">Онлайн</th>
+        </tr>
+      </thead>
+      <tbody>
+    `;
+
+    data.forEach((player, idx) => {
+      const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}.`;
+
+      topHtml += `
+        <tr style="border-bottom:1px solid #333;">
+          <td style="padding:6px 0; color:#fff;">${medal}</td>
+          <td style="padding:6px 4px; color:#4dabf7; cursor:pointer; transition:color 0.2s;" 
+              class="top-player-name"
+              data-player-name="${player.nickname}"
+              onmouseover="this.style.color='#64e6ff'"
+              onmouseout="this.style.color='#4dabf7'">
+            ${player.nickname}
+          </td>
+          <td style="padding:6px 0; color:#52BE80; font-weight:bold; text-align:center;">${player.games}</td>
+          <td style="padding:6px 0; color:#888; font-size:10px; text-align:right;">${player.last_game}</td>
+        </tr>
+      `;
+    });
+
+    topHtml += '</tbody></table>';
+    weeklyTop.innerHTML = topHtml;
+  }
+
+  renderTopPlayers();
+  document.body.appendChild(weeklyTop);
+
+  weeklyTop.addEventListener('click', (e) => {
+    const periodBtn = e.target.closest('.period-btn');
+    if (periodBtn) {
+      const newPeriod = periodBtn.getAttribute('data-period');
+      if (newPeriod !== currentPeriod) {
+        currentPeriod = newPeriod;
+        renderTopPlayers();
+      }
+      return;
+    }
+
+    const playerItem = e.target.closest('.top-player-name');
+    if (playerItem) {
+      const playerName = playerItem.getAttribute('data-player-name');
+      const nodes = network.body.data.nodes.get();
+      const targetNode = nodes.find(n => n.label === playerName);
+
+      if (targetNode) {
+        network.selectNodes([targetNode.id]);
+        handleNodeClick(targetNode.id);
+        network.focus(targetNode.id, {
+          animation: { duration: 500, easingFunction: 'easeInOutQuad' }
+        });
+      }
+    }
+  });
+
+  // === 🔥 РЕЙТИНГОВАЯ ТАБЛИЦА (ПОКА ПУСТАЯ) ===
+  const ratingTable = document.createElement('div');
+  Object.assign(ratingTable.style, {
+    position: 'fixed',
+    bottom: '20px',
+    left: '20px',
+    background: 'rgba(30,30,30,0.95)',
+    color: 'white',
+    padding: '15px',
+    borderRadius: '12px',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
+    fontFamily: 'system-ui, -apple-system, sans-serif',
+    maxHeight: '400px',
+    overflowY: 'auto',
+    minWidth: '280px',
+    zIndex: '99997'
+  });
+
+  const PAGE_SIZE = 30;
+  let eloPage = 0;
+  const eloTotalPages = Math.ceil(eloLeaderboardData.length / PAGE_SIZE);
+
+  function buildRatingTable() {
+    if (!eloLeaderboardData || eloLeaderboardData.length === 0) {
+      return `<h4 style="margin:0 0 10px 0; color:#4dabf7; font-size:14px;">🏆 Рейтинговая таблица</h4><p style="color:#888; font-size:12px; margin:0;">Нет данных</p>`;
+    }
+    const medals = ['🥇', '🥈', '🥉'];
+    const start = eloPage * PAGE_SIZE;
+    const pageData = eloLeaderboardData.slice(start, start + PAGE_SIZE);
+    let rows = '';
+    pageData.forEach((p, i) => {
+      const absIdx = start + i;
+      const medal = absIdx < 3 ? medals[absIdx] : `<span style="color:#666;font-size:11px;">#${p.rank}</span>`;
+      const eloColor = p.elo >= 1200 ? '#FFD700' : p.elo >= 1100 ? '#4dabf7' : p.elo >= 1000 ? '#52BE80' : '#aaa';
+      rows += `<div style="display:flex;align-items:center;gap:8px;padding:5px 4px;border-bottom:1px solid rgba(255,255,255,0.06);font-size:12px;">
+        <span style="width:22px;text-align:center;flex-shrink:0;">${medal}</span>
+        <span style="flex:1;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${p.name}">${p.name}</span>
+        <span style="color:${eloColor};font-weight:bold;flex-shrink:0;">${p.elo}</span>
+        <span style="color:#666;font-size:11px;flex-shrink:0;">${p.wr}%</span>
+      </div>`;
+    });
+
+    const pagination = eloTotalPages > 1 ? `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+        <button id="eloPrev" onclick="eloChangePage(-1)" style="background:rgba(77,171,247,0.15);border:1px solid rgba(77,171,247,0.3);color:#4dabf7;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;" ${eloPage === 0 ? 'disabled style="opacity:0.3;cursor:default;background:rgba(77,171,247,0.15);border:1px solid rgba(77,171,247,0.3);color:#4dabf7;border-radius:6px;padding:4px 10px;font-size:12px;"' : ''}>‹</button>
+        <span style="color:#666;font-size:11px;">${eloPage + 1} / ${eloTotalPages}</span>
+        <button id="eloNext" onclick="eloChangePage(1)" style="background:rgba(77,171,247,0.15);border:1px solid rgba(77,171,247,0.3);color:#4dabf7;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;" ${eloPage === eloTotalPages - 1 ? 'disabled style="opacity:0.3;cursor:default;background:rgba(77,171,247,0.15);border:1px solid rgba(77,171,247,0.3);color:#4dabf7;border-radius:6px;padding:4px 10px;font-size:12px;"' : ''}>›</button>
+      </div>` : '';
+
+    return `<h4 style="margin:0 0 8px 0; color:#4dabf7; font-size:14px;">🏆 Рейтинговая таблица</h4>
+      <div style="font-size:10px;color:#666;margin-bottom:8px;">${eloLeaderboardData.length} игроков • ELO / WR</div>
+      <div id="eloRows">${rows}</div>
+      ${pagination}`;
+  }
+
+  window.eloChangePage = function(dir) {
+    const newPage = eloPage + dir;
+    if (newPage < 0 || newPage >= eloTotalPages) return;
+    eloPage = newPage;
+    ratingTable.innerHTML = buildRatingTable();
+    ratingTable.scrollTop = 0;
+  };
+
+  ratingTable.innerHTML = buildRatingTable();
+
+  document.body.appendChild(ratingTable);
+
+  const dropdown = document.createElement('div');
+  Object.assign(dropdown.style, {
+    position: 'absolute',
+    top: '50px',
+    left: '0',
+    width: '280px',
+    maxHeight: '300px',
+    overflowY: 'auto',
+    background: 'rgba(30,30,30,0.98)',
+    borderRadius: '8px',
+    boxShadow: '0 8px 24px rgba(0,0,0,0.6)',
+    display: 'none',
+    zIndex: '100000'
+  });
+  searchContainer.appendChild(dropdown);
+
+  let searchTimeout;
+  searchBox.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    clearTimeout(searchTimeout);
+
+    if (!query) {
+      dropdown.style.display = 'none';
+      return;
+    }
+
+    searchTimeout = setTimeout(() => {
+      const nodes = network.body.data.nodes.get();
+      const matches = nodes
+        .filter(n => n.label && n.label.toLowerCase().includes(query))
+        .slice(0, 10);
+
+      if (matches.length === 0) {
+        dropdown.innerHTML = '<div style="padding:10px;color:#888;">Ничего не найдено</div>';
+        dropdown.style.display = 'block';
+        return;
+      }
+
+      dropdown.innerHTML = '';
+      matches.forEach(node => {
+        const item = document.createElement('div');
+        Object.assign(item.style, {
+          padding: '10px 15px',
+          cursor: 'pointer',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+          transition: 'background 0.2s',
+          color: '#ffffff'
+        });
+        item.textContent = node.label;
+
+        item.addEventListener('mouseenter', () => {
+          item.style.background = 'rgba(77,171,247,0.2)';
+        });
+        item.addEventListener('mouseleave', () => {
+          item.style.background = 'transparent';
+        });
+
+        item.addEventListener('click', () => {
+          searchBox.value = node.label;
+          dropdown.style.display = 'none';
+          network.selectNodes([node.id]);
+          handleNodeClick(node.id);
+        });
+
+        dropdown.appendChild(item);
+      });
+
+      dropdown.style.display = 'block';
+    }, 300);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!searchContainer.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  // === ОБРАБОТЧИК КЛИКА ===
+  function handleNodeClick(nodeId) {
+    if (isProcessingClick) return;
+    isProcessingClick = true;
+
+    const edges = network.body.data.edges;
+    const nodes = network.body.data.nodes;
+    const node = nodes.get(nodeId);
+
+    if (!node) return;
+
+    const playerName = node.label || nodeId;
+
+    if (selectedNodeId === nodeId) {
+      hideAllEdges();
+      hideInfo();
+      selectedNodeId = null;
+      network.unselectAll();
+
+      setTimeout(() => {
+        isProcessingClick = false;
+      }, 100);
+      return;
+    }
+
+    hideAllEdges();
+    showNodeEdges(nodeId);
+    selectedNodeId = nodeId;
+
+    const allEdges = edges.get();
+    const connected = allEdges.filter(e =>
+      String(e.from) === String(nodeId) || String(e.to) === String(nodeId)
+    );
+
+    const connections = connected
+      .filter(e => e.games && !e.manual)
+      .map(e => {
+        const otherId = String(e.from) === String(nodeId) ? e.to : e.from;
+        const other = nodes.get(otherId);
+        return [other ? other.label : otherId, e.games];
+      })
+      .sort((a, b) => b[1] - a[1]);
+
+    showInfo(playerName, connections);
+
+    setTimeout(() => {
+      isProcessingClick = false;
+    }, 100);
+  }
+
+  network.on("click", function(params) {
+    if (params.nodes.length) {
+      handleNodeClick(params.nodes[0]);
+    } else {
+      hideAllEdges();
+      hideInfo();
+      selectedNodeId = null;
+    }
+  });
+
+  network.on("selectNode", function(params) {
+    if (params.nodes.length) {
+      handleNodeClick(params.nodes[0]);
+    }
+  });
+
+  // === ЛОАДЕР ===
+  const loader = document.createElement('div');
+  Object.assign(loader.style, {
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    color: '#fff',
+    fontSize: '20px',
+    zIndex: '100000',
+    background: 'rgba(30,30,30,0.9)',
+    padding: '20px 40px',
+    borderRadius: '12px',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.8)'
+  });
+  loader.innerHTML = '⏳ Загрузка графа...';
+  document.body.appendChild(loader);
+
+  network.once('stabilizationIterationsDone', () => {
+    loader.style.display = 'none';
+  });
+
+  console.log("✅ График с сообществами готов!");
+})();
+</script>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#mynetwork {
+  width: 100vw;
+  height: 100vh;
+}
+
+div[style*="position: fixed"][style*="right: 20px"]::-webkit-scrollbar {
+  width: 8px;
+}
+
+div[style*="position: fixed"][style*="right: 20px"]::-webkit-scrollbar-track {
+  background: rgba(50,50,50,0.5);
+  border-radius: 4px;
+}
+
+div[style*="position: fixed"][style*="right: 20px"]::-webkit-scrollbar-thumb {
+  background: rgba(100,100,100,0.8);
+  border-radius: 4px;
+}
+
+div[style*="position: fixed"][style*="bottom: 20px"]::-webkit-scrollbar {
+  width: 6px;
+}
+
+div[style*="position: fixed"][style*="bottom: 20px"]::-webkit-scrollbar-track {
+  background: rgba(50,50,50,0.3);
+}
+
+div[style*="position: fixed"][style*="bottom: 20px"]::-webkit-scrollbar-thumb {
+  background: rgba(100,100,100,0.6);
+  border-radius: 3px;
+}
+</style>

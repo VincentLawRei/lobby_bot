@@ -1,0 +1,6 @@
+UUID,FinishTime,Duration,Outcome,Generator Fuel Time,Escape Progress,Charge Located?,Barrier Destroyed?,Base Breaches,Highest Hazard Level,Armory Opened?,Map,PublicLobby,Custom Settings
+BBBB0000000000000000000000000002,2026.02.09-10.00.00,+00:03:10.000,Crew Won,+00:00:00.000,12 %,No,No,0,0%,No,Outpost,false,
+
+Native Platform,Native Id,EOS Id,Team,Role,Name,Rating,Deaths,Cause of Death,Jail Time,Ghost Time,Disconnected Time,Uptime,GiveXP,Cheats,Confidence
+Steam,76561000000000000,eos00,Crew,EPlayerTeamRole::PTR_COMMANDER,"Player0",B+,0,Monsters,+00:00:00.000,+00:00:00.000,+00:00:00.000,90%,true,,0%
+Steam,76561000000000001,eos01,Crew,EPlayerTeamRole::PTR_MECHANIC,"Player1",B+,0,Monsters,+00:00:00.000,+00:00:00.000,+00:00:00.000,90%,true,,0%
